@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addClass()">Thêm Class</button>
+    <button onclick="removeClass()">remove Class</button>
+    <p id="textElement">Đoạn văn bản này sẽ thêm lớp khi nhấp vào nút.</p>
+    <p>BLOCK next</p>
+
+    <script>
+        function addClass() {
+            let textElement = document.getElementById('textElement');
+            textElement.classList.add('highlight');
+        }
+        function removeClass() {
+            let textElement = document.getElementById('textElement');
+            textElement.classList.remove('highlight');
+        }
+    </script>
+</body>
+</html>
