@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ví dụ Bootstrap Components</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ví dụ Bootstrap Components</h1>
+
+    <!-- 1. Alerts: Các thông báo -->
+    <div class="alert alert-success" role="alert">
+      Đây là một thông báo thành công!
+    </div>
+    <div class="alert alert-danger" role="alert">
+      Đây là một thông báo lỗi!
+    </div>
+
+    <!-- 2. Badges: Các nhãn nhỏ -->
+    <h2>Đây là một tiêu đề <span class="badge badge-secondary">Nhãn</span></h2>
+
+    <!-- 3. Buttons: Các nút -->
+    <button type="button" class="btn btn-primary">Nút Primary</button>
+    <button type="button" class="btn btn-secondary">Nút Secondary</button>
+
+    <!-- 4. Card: Thẻ chứa nội dung -->
+    <div class="card" style="width: 18rem;">
+      <img src="https://via.placeholder.com/150" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tiêu đề thẻ</h5>
+        <p class="card-text">Một đoạn văn bản ngắn để mô tả nội dung của thẻ.</p>
+        <a href="#" class="btn btn-primary">Đi đâu đó</a>
+      </div>
+    </div>
+
+    <!-- 5. Dropdowns: Menu thả xuống -->
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu thả xuống
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Hành động 1</a>
+        <a class="dropdown-item" href="#">Hành động 2</a>
+        <a class="dropdown-item" href="#">Hành động 3</a>
+      </div>
+    </div>
+
+    <!-- 6. Modals: Hộp thoại popup -->
+    <!-- Nút kích hoạt modal -->
+    <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#exampleModal">
+      Hiển thị Modal
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Tiêu đề Modal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Nội dung của modal.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary">Lưu thay đổi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Navbars: Thanh điều hướng -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Giới thiệu</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 8. Progress: Thanh tiến trình -->
+    <div class="progress mt-3">
+      <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Example</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .header { background-color: #007bff; color: white; }
+    .container-example { background-color: #f8f9fa; border: 1px solid #dee2e6; }
+    .container-fluid-example { background-color: #e9ecef; border: 1px solid #ced4da; }
+    .col-example { background-color: #1dac00; border: 1px solid #d6d6d6; padding: 10px; }
+    .nested-col { background-color: #d6d8db; padding: 10px; }
+    .order-col { padding: 10px; }
+    .order-col-1 { background-color: #6c757d; color: white; }
+    .order-col-2 { background-color: #adb5bd; }
+    .order-col-3 { background-color: #ced4da; }
+    .offset-example { background-color: #f0f0f0; border: 1px solid #d6d6d6; padding: 10px; }
+</style>
+
+</head>
+
+
+    <body>
+        <div class="text-center">
+            <div class="row ">
+              <div class="col-2 col-sm-12 col-md-4 col-example ">
+                Column abc
+              </div>
+            </div>
+          </div>
+        <!-- Container Example -->
+        <div class="container container-example my-3">
+            <h1 class="header">Container</h1>
+            <p>Đây là một container cố định chiều rộng.</p>
+        </div>
+    
+        <div class="container-fluid container-fluid-example my-3">
+            <h1 class="header">Container Fluid</h1>
+            <p>Đây là một container bao phủ toàn bộ chiều rộng của viewport.</p>
+        </div>
+    
+        <!-- Grid System Example -->
+        <div class="my-3">
+            <div class="row">
+                <div class="col col-example">
+                    Cột 111
+                </div>
+                <div class="col col-example">
+                    Cột 2222
+                </div>
+                <div class="col col-example">
+                    Cột 3333
+                </div>
+            </div>
+        </div>
+    
+        <!-- Breakpoints Example -->
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-example">
+                    Cột 1
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-example">
+                    Cột 2
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-example">
+                    Cột 3
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-example">
+                    Cột 4
+                </div>
+            </div>
+        </div>
+    
+        <!-- Nesting Columns Example -->
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-8 col-example">
+                    Cột 1
+                    <div class="row">
+                        <div class="col-6 nested-col">
+                            Cột 1.1
+                        </div>
+                        <div class="col-6 nested-col">
+                            Cột 1.2
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-example">
+                    Cột 2
+                </div>
+            </div>
+        </div>
+    
+        <!-- Order Classes Example -->
+        <div class="container my-3">
+            <div class="row">
+                <div class="col order-1 order-col order-col-3">
+                    Cột 1
+                </div>
+                <div class="col order-2 order-col order-col-1">
+                    Cột 2
+                </div>
+                <div class="col order-3 order-col order-col-2">
+                    Cột 3
+                </div>
+            </div>
+        </div>
+    
+        <!-- Offset Classes Example -->
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-12 offset-2 offset-example">
+                    Cột ở giữa
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

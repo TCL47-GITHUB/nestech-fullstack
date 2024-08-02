@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animate.css and JavaScript Example</title>
+  <!-- Link to Animate.css via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* Additional styles if needed */
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      color: white;
+      line-height: 100px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      Click me!
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Lấy phần tử .box
+      const box = document.querySelector('.box');
+
+      // Thêm sự kiện click vào .box
+      box.addEventListener('click', function() {
+        // Thêm lớp animate__animated và animate__bounceOutRight vào phần tử
+        this.classList.add('animate__animated', 'animate__bounceOutRight');
+
+        // Đợi animation kết thúc (khoảng 1s) rồi xóa lớp để chuẩn bị cho lần click tiếp theo
+        setTimeout(() => {
+          this.classList.remove('animate__bounceOutRight');
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click Alert Example</title>
+</head>
+<body>
+  <button id="myButton">Click me!</button>
+
+  <script>
+    document.getElementById('myButton').addEventListener('click', function() {
+      alert('Hello');
+    });
+  </script>
+</body>
+</html> -->
+

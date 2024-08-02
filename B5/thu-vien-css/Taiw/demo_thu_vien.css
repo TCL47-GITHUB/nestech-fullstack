@@ -1,0 +1,19 @@
+.flex{
+    display: flex;
+}
+
+.flex-js-center{
+    justify-content: center;
+}
+
+.flex-js-around{
+    justify-content: space-around;
+}
+
+.flex-js-between{
+    justify-content: space-between;
+}
+
+.bg-black{
+    background-color: black;
+}
