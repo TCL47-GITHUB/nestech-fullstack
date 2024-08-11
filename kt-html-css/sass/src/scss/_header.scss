@@ -22,6 +22,12 @@ header nav {
       align-items: center;
       gap: 8px;
 
+      .icon-mm-menu{
+        font-size: 24px;
+        font-weight: 600;
+        display: none;
+      }
+
       img {
         width: 27px;
         height: 27px;
@@ -226,13 +232,22 @@ header nav {
   header nav .header .header-search{
     display: none;
   }
+  header nav .header {
+    .header-logo{
+      .icon-mm-menu{
+        display: inline;
+      }
+    }
+  }
 }
 
 /* Màn hình nhỏ (mobile) từ 576px đến 767px */
 @media only screen and (max-width: 767px) {
+  
 }
 
 /* Màn hình rất nhỏ (dưới 576px) */
 @media only screen and (max-width: 575px) {
+
 
 }

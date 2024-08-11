@@ -11,6 +11,7 @@
   .btn-support-chat {
     position: fixed;
     display: flex;
+    z-index: 100;
     align-items: center;
     justify-content: center;
     color: $link-color;
@@ -32,8 +33,6 @@
     }
     .icon-mm-circle-fill{
       transition: all 400ms ease-out;
-    }
-    i {
       color: green;
     }
   }
@@ -101,9 +100,9 @@
           display: none;
           border-radius: 0;
           margin: 0;
-          padding: 1rem 0;
+          padding: 1rem;
           code {
-            padding: 0 1rem;
+            text-wrap: wrap;
           }
         }
         .form {
@@ -266,17 +265,20 @@
 
 /* Màn hình lớn (desktop) từ 992px đến 1199px */
 @media only screen and (max-width: 1199px) {
-  .container .wrapper .left {
-    width: 100%;
-  }
-  .container .wrapper .right {
-    display: none;
+  .container .wrapper {
+    flex-direction: column-reverse;
+    .left {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+    }
   }
 }
 
 /* Màn hình trung bình (tablet) từ 768px đến 991px */
 @media only screen and (max-width: 991px) {
-  main aside {
+  main #sideBar {
     display: none;
   }
   .container .wrapper {
