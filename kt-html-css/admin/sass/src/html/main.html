@@ -2,6 +2,77 @@
 <div class="container">
   <div class="wrapper">
     <div class="left">
+      <!-- Echart/Bar -->
+      <div class="card">
+        <div class="card-header">
+          <h4>Stacked Bar</h4>
+          <nav class="nav doc-tab-nav">
+            <button onclick="copyContent('content')"
+              class="btn btn-link px-2 text-body copy-code-btn"
+              type="button"
+            >
+              <i class="icon-mm-copy"></i>Copy Code
+            </button>
+            <a id="btnViewCode" onclick="toggleContent('btnViewCode','content')" class="btn code-btn collapsed"  href="#basic-form-code">
+              <i class="icon-mm-eye"></i>
+              View code</a>      
+          </nav>
+        </div>
+         <pre id="content" class="language-markup view-code"><code>&lt;form&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label class="form-label" for="basic-form-name"&gt;Name&lt;/label&gt;
+    &lt;input class="form-control" id="basic-form-name" type="text" placeholder="Name"&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label class="form-label" for="basic-form-email"&gt;Email address&lt;/label&gt;
+    &lt;input class="form-control" id="basic-form-email" type="email" placeholder="name@example.com"&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label class="form-label" for="basic-form-password"&gt;Password&lt;/label&gt;
+    &lt;input class="form-control" id="basic-form-password" type="password" placeholder="Password"&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label class="form-label" for="basic-form-dob"&gt;Date of Birth&lt;/label&gt;
+    &lt;input class="form-control" id="basic-form-dob" type="date"&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label class="form-label" for="basic-form-gender"&gt;Gender&lt;/label&gt;
+    &lt;select class="form-select" id="basic-form-gender" aria-label="Default select example"&gt;
+      &lt;option selected="selected"&gt;Select your gender&lt;/option&gt;
+      &lt;option value="male"&gt;Male&lt;/option&gt;
+      &lt;option value="female"&gt;Female&lt;/option&gt;
+      &lt;option value="other"&gt;Other&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;div class="form-check"&gt;
+      &lt;input class="form-check-input" id="flexRadioDefault1" type="radio" name="flexRadioDefault"&gt;
+      &lt;label class="form-check-label mb-0" for="flexRadioDefault1"&gt;Personal Account&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-check"&gt;
+      &lt;input class="form-check-input" id="flexRadioDefault2" type="radio" name="flexRadioDefault" checked="checked"&gt;
+      &lt;label class="form-check-label mb-0" for="flexRadioDefault2"&gt;Business Account&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label class="form-label"&gt;Upload Image&lt;/label&gt;
+    &lt;input class="form-control" type="file"&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3"&gt;
+    &lt;label class="form-label" for="basic-form-textarea"&gt;Description&lt;/label&gt;
+    &lt;textarea class="form-control" id="basic-form-textarea" rows="3" placeholder="Description"&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;div class="mb-3 form-check"&gt;
+    &lt;input class="form-check-input" id="basic-form-checkbox" type="checkbox"&gt;
+    &lt;label class="form-check-label" for="basic-form-checkbox"&gt;Remember me&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        <div class="card-body" style="height: 350px; width: 400px">
+          <div id="bar-chart" style="height: 100%"></div>
+        </div>
+      </div>
+      <!-- Basic form -->
       <div class="card">
         <div class="card-header">
           <h4>Basic form</h4>
@@ -176,6 +247,7 @@
           </form>
         </div>
       </div>
+      <!-- Accented tables -->
       <div class="card">
         <div class="card-header">
           <h4>Accented tables</h4>

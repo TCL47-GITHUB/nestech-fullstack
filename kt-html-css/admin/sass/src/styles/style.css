@@ -763,6 +763,10 @@ aside nav:hover {
 .container .wrapper .left .card .card-header .nav .code-btn:hover {
   background-color: #eff2f6;
 }
+.container .wrapper .left .card .card-body-chart {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .container .wrapper .left .card .view-code {
   height: 400px;
   width: 100%;
