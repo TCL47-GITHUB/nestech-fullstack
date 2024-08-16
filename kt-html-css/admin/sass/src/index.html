@@ -27,6 +27,10 @@
         </aside>
         <div class="main-group">
           <!-- <include src="html/main.html"></include> -->
+          <div class="card-body card-body-chart">
+            <div id="bar-chart-1" style="height:400px"></div>
+            <div id="bar-chart-2"  style="height:400px;"></div>
+          </div>
           <my-main></my-main>
           <footer>
             <include src="html/footer.html"></include>
@@ -42,218 +46,43 @@
     <script src="js/main-component.js"></script>
     <script src="js/header-component.js"></script>
     <script src="js/main.js"></script>
-   
-<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-nightly@5.6.0-dev.20240812/dist/echarts.min.js"></script>
-<script>
-  var dom = document.getElementById('bar-chart-1');
-    var myChart = echarts.init(dom, null, {
-      renderer: 'canvas',
-      useDirtyRect: false
-    });
-    var app = {};
-    
-    var option;
-
-    var series = [
-  {
-    data: [120, 100, 200, 80, 70, 110, 130],
-    type: 'bar',
-    stack: 'a',
-    name: 'a'
-  },
-   {
-    data: [180, 90, 40, 120, 140, 20, 10],
-    type: 'bar',
-    stack: 'b',
-    name: 'b'
-  }
-  // {
-  //   data: [10, 46, 64, '-', 0, '-', 0],
-  //   type: 'bar',
-  //   stack: 'a',
-  //   name: 'b'
-  // },
-  // {
-  //   data: [30, '-', 0, 20, 10, '-', 0],
-  //   type: 'bar',
-  //   stack: 'a',
-  //   name: 'c'
-  // },
-  // {
-  //   data: [30, '-', 0, 20, 10, '-', 0],
-  //   type: 'bar',
-  //   stack: 'b',
-  //   name: 'd'
-  // },
-  // {
-  //   data: [10, 20, 150, 0, '-', 50, 10],
-  //   type: 'bar',
-  //   stack: 'b',
-  //   name: 'e'
-  // }
-];
-const stackInfo = {};
-for (let i = 0; i < series[0].data.length; ++i) {
-  for (let j = 0; j < series.length; ++j) {
-    const stackName = series[j].stack;
-    if (!stackName) {
-      continue;
-    }
-    if (!stackInfo[stackName]) {
-      stackInfo[stackName] = {
-        stackStart: [],
-        stackEnd: []
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-nightly@5.6.0-dev.20240812/dist/echarts.min.js"></script>
+    <script type="text/javascript">
+      var dom = document.getElementById('bar-chart-2');
+      var myChart = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+      });
+      var app = {};
+      
+      var option;
+  
+      option = {
+    xAxis: {
+      type: 'category',
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+      type: 'value'
+    },
+    series: [
+      {
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'bar'
+      }
+    ]
+  };
+  
+      if (option && typeof option === 'object') {
+        myChart.setOption(option);
+      }
+      window.onload = function() {
+        myChart.resize;
       };
-    }
-    const info = stackInfo[stackName];
-    const data = series[j].data[i];
-    if (data && data !== '-') {
-      if (info.stackStart[i] == null) {
-        info.stackStart[i] = j;
-      }
-      info.stackEnd[i] = j;
-    }
-  }
-}
-for (let i = 0; i < series.length; ++i) {
-  const data = series[i].data;
-  const info = stackInfo[series[i].stack];
-  for (let j = 0; j < series[i].data.length; ++j) {
-    // const isStart = info.stackStart[j] === i;
-    const isEnd = info.stackEnd[j] === i;
-    const topBorder = isEnd ? 20 : 0;
-    const bottomBorder = 0;
-    data[j] = {
-      value: data[j],
-      itemStyle: {
-        borderRadius: [topBorder, topBorder, bottomBorder, bottomBorder]
-      }
-    };
-  }
-}
-option = {
-  xAxis: {
-    type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-  },
-  yAxis: {
-    type: 'value'
-  },
-  series: series
-};
 
-
-    if (option && typeof option === 'object') {
-      myChart.setOption(option);
-    }
-
-    window.addEventListener('resize', myChart.resize);
-</script>
-<script>
-  var dom = document.getElementById('bar-chart-2');
-    var myChart = echarts.init(dom, null, {
-      renderer: 'canvas',
-      useDirtyRect: false
-    });
-    var app = {};
-    
-    var option;
-
-    var series = [
-  {
-    data: [120, 100, 200, 80, 70, 110, 130],
-    type: 'bar',
-    stack: 'a',
-    name: 'a'
-  },
-   {
-    data: [180, 90, 40, 120, 140, 20, 10],
-    type: 'bar',
-    stack: 'b',
-    name: 'b'
-  }
-  // {
-  //   data: [10, 46, 64, '-', 0, '-', 0],
-  //   type: 'bar',
-  //   stack: 'a',
-  //   name: 'b'
-  // },
-  // {
-  //   data: [30, '-', 0, 20, 10, '-', 0],
-  //   type: 'bar',
-  //   stack: 'a',
-  //   name: 'c'
-  // },
-  // {
-  //   data: [30, '-', 0, 20, 10, '-', 0],
-  //   type: 'bar',
-  //   stack: 'b',
-  //   name: 'd'
-  // },
-  // {
-  //   data: [10, 20, 150, 0, '-', 50, 10],
-  //   type: 'bar',
-  //   stack: 'b',
-  //   name: 'e'
-  // }
-];
-const stackInfo2 = {};
-for (let i = 0; i < series[0].data.length; ++i) {
-  for (let j = 0; j < series.length; ++j) {
-    const stackName = series[j].stack;
-    if (!stackName) {
-      continue;
-    }
-    if (!stackInfo2[stackName]) {
-      stackInfo2[stackName] = {
-        stackStart: [],
-        stackEnd: []
-      };
-    }
-    const info = stackInfo2[stackName];
-    const data = series[j].data[i];
-    if (data && data !== '-') {
-      if (info.stackStart[i] == null) {
-        info.stackStart[i] = j;
-      }
-      info.stackEnd[i] = j;
-    }
-  }
-}
-for (let i = 0; i < series.length; ++i) {
-  const data = series[i].data;
-  const info = stackInfo2[series[i].stack];
-  for (let j = 0; j < series[i].data.length; ++j) {
-    // const isStart = info.stackStart[j] === i;
-    const isEnd = info.stackEnd[j] === i;
-    const topBorder = isEnd ? 20 : 0;
-    const bottomBorder = 0;
-    data[j] = {
-      value: data[j],
-      itemStyle: {
-        borderRadius: [topBorder, topBorder, bottomBorder, bottomBorder]
-      }
-    };
-  }
-}
-option = {
-  xAxis: {
-    type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-  },
-  yAxis: {
-    type: 'value'
-  },
-  series: series
-};
-
-
-    if (option && typeof option === 'object') {
-      myChart.setOption(option);
-    }
-
-    window.addEventListener('resize', myChart.resize);
-</script>
+      window.addEventListener('resize', myChart.resize);
+    </script>
+<script src="js/chart.js"></script>
     <!-- prismjs highlight code -->
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>

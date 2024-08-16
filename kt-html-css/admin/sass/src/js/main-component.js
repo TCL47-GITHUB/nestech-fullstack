@@ -71,10 +71,10 @@ class Main extends HTMLElement {
   &lt;/div&gt;
   &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</code></pre>
-        <div class="card-body card-body-chart">
-          <div id="bar-chart-1" style="width: 100%; aspect-ratio: 4 / 2.5;overflow: hidden;"></div>
-          <div id="bar-chart-2" style="width: 100%; aspect-ratio: 4 / 2.5;overflow: hidden;"></div>
-        </div>
+
+
+
+
       </div>
       <!-- Basic form -->
       <div class="card">
