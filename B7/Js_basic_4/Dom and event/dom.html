@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truy cập Phần tử DOM</title>
+    <style>
+        .output {
+            padding: 20px;
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Truy cập và Thay đổi Các Phần tử DOM</h2>
+
+    <p id="paragraphId">Đoạn văn với ID</p>
+    <p class="paragraphClass">Đoạn văn với lớp</p>
+    <p class="paragraphClass">Đoạn văn khác với lớp</p>
+    <div class="container">
+        <p>Đoạn văn bên trong div</p>
+    </div>
+
+    <button id="changeContent">Thay đổi Nội dung</button>
+
+    <div class="output" id="output">Thông tin sẽ hiển thị ở đây</div>
+
+    <script>
+        // Truy cập phần tử bằng ID
+        const paragraphById = document.getElementById("paragraphId");
+        // paragraphById.textContent = "Nội dung mới cho đoạn văn với ID";
+        // console.log(paragraphById);
+
+        // Truy cập các phần tử bằng lớp
+        const paragraphsByClass = document.getElementsByClassName("paragraphClass");
+        // for (let i = 0; i < paragraphsByClass.length; i++) {
+        //     paragraphsByClass[i].textContent = `Nội dung mới cho đoạn văn với lớp ${i + 1}`;
+        // }
+        // console.log(paragraphsByClass);
+        // console.log(paragraphsByClass[0]);
+
+        // Truy cập các phần tử bằng tên thẻ
+        const paragraphsByTag = document.getElementsByTagName("p");
+        // for (let i = 0; i < paragraphsByTag.length; i++) {
+        //     paragraphsByTag[i].textContent += ` (Thay đổi từ getElementsByTagName)`;
+        // }
+
+        // console.log(paragraphsByTag);
+        // console.log(paragraphsByTag[0]);
+
+
+        // Truy cập phần tử đầu tiên bằng selector CSS
+        const firstParagraphBySelector = document.querySelector("p");
+        // firstParagraphBySelector.textContent = "Nội dung mới cho đoạn văn đầu tiên với lớp";
+
+        console.log(firstParagraphBySelector);
+
+        // Truy cập tất cả các phần tử bằng selector CSS
+        const allParagraphsBySelectorAll = document.querySelectorAll(".paragraphClass");
+        // allParagraphsBySelectorAll.forEach((para, index) => {
+        //     para.textContent += ` (Thay đổi từ querySelectorAll ${index + 1})`;
+        // });
+
+        // Thay đổi nội dung khi nhấn nút
+        const output = document.getElementById("output");
+        // document.getElementById("changeContent").addEventListener("click", function() {
+        //     output.textContent = "Nội dung đã được thay đổi khi nhấn nút!";
+        //     output.style.backgroundColor = "lightgreen";
+        // });
+    </script>
+</body>
+</html>

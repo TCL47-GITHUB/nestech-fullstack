@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Sự kiện Bàn phím trong JavaScript</title>
+    <style>
+        #output {
+            padding: 20px;
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Nhấn các phím để xem sự kiện bàn phím</h2>
+    <div id="output">Nhấn một phím</div>
+
+    <script>
+        const output = document.getElementById("output");
+
+        // Sự kiện khi nhấn phím
+        document.addEventListener("keydown", function(event) {
+            output.textContent = `Nhấn phím: ${event.key} (Mã phím: ${event.keyCode})`;
+             output.style.backgroundColor = "lightyellow";
+            console.log("đã nhấn phím")
+        });
+
+        // Sự kiện khi thả phím
+        document.addEventListener("keyup", function(event) {
+            output.textContent = `Thả phím: ${event.key} (Mã phím: ${event.keyCode})`;
+            output.style.backgroundColor = "#f0f0f0";
+        });
+
+        // Sự kiện khi nhấn phím bất kỳ (nhấn giữ phím)
+        document.addEventListener("keypress", function(event) {
+            output.textContent = `Nhấn phím ký tự: ${event.key}`;
+            output.style.backgroundColor = "lightblue";
+        });
+    </script>
+</body>
+</html>

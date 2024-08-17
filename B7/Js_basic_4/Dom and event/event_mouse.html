@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Sự kiện Chuột trong JavaScript</title>
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Di chuột và nhấp vào ô vuông</h2>
+    <div id="myBox">Di chuột qua đây</div>
+
+    <script>
+        const box = document.getElementById("myBox");
+
+        // Sự kiện khi nhấp chuột vào ô vuông
+        box.addEventListener("click", function() {
+            box.textContent = "Đã nhấp chuột!";
+            box.style.backgroundColor = "lightgreen";
+        });
+
+        // Sự kiện khi nhấp đúp chuột vào ô vuông
+        box.addEventListener("dblclick", function() {
+            box.textContent = "Đã nhấp đúp chuột!";
+            box.style.backgroundColor = "lightcoral";
+        });
+
+        // Sự kiện khi di chuột vào ô vuông
+        box.addEventListener("mouseover", function() {
+            box.textContent = "Di chuột vào!";
+            box.style.backgroundColor = "lightyellow";
+        });
+
+        // Sự kiện khi di chuột ra khỏi ô vuông
+        box.addEventListener("mouseout", function() {
+            box.textContent = "Di chuột ra!";
+            box.style.backgroundColor = "lightblue";
+        });
+
+
+        
+    </script>
+</body>
+</html>

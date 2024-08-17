@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manager</title>
+    <style>
+        #demo {
+            margin-bottom: 20px;
+        }
+        .input-container {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+
+    <div class="input-container">
+        <input type="number" id="idInput" placeholder="ID" />
+        <input type="text" id="nameInput" placeholder="Name" />
+        <input type="number" id="ageInput" placeholder="Age" />
+    </div>
+
+    <button onclick="them()">Thêm</button>
+    <button onclick="sua()">Sửa</button>
+    <button onclick="xoa()">Xóa</button>
+
+    <script>
+        // Tạo mảng chứa các đối tượng
+        const students = [
+            { id: 1, name: 'Alice', age: 22 },
+            { id: 2, name: 'Bob', age: 25 },
+            { id: 3, name: 'Charlie', age: 23 }
+        ];
+
+        // Hàm cập nhật giao diện
+        function render() {
+            const demo = document.getElementById('demo');
+            demo.innerHTML = ''; // Xóa nội dung hiện tại
+            for (let i = 0; i < students.length; i++) {
+                const student = students[i];
+                const div = document.createElement('div');
+                div.textContent = `ID: ${student.id}, Name: ${student.name}, Age: ${student.age}`;
+                demo.appendChild(div);
+            }
+        }
+
+        // Hàm thêm học sinh
+        function them() {
+            const id = parseInt(document.getElementById('idInput').value);
+            const name = document.getElementById('nameInput').value;
+            const age = parseInt(document.getElementById('ageInput').value);
+
+            if (isNaN(id) || !name || isNaN(age)) {
+                alert('Vui lòng nhập đầy đủ thông tin hợp lệ.');
+                return;
+            }
+
+            students.push({ id, name, age });
+            render();
+            clearInputs();
+        }
+
+        // Hàm sửa học sinh
+        function sua() {
+            const id = parseInt(document.getElementById('idInput').value);
+            const name = document.getElementById('nameInput').value;
+            const age = parseInt(document.getElementById('ageInput').value);
+
+            if (isNaN(id)) {
+                alert('Vui lòng nhập ID hợp lệ.');
+                return;
+            }
+
+            for (let i = 0; i < students.length; i++) {
+                let student = students[i];
+                if (student.id === id) {
+                    student.name = name || student.name;
+                    student.age = isNaN(age) ? student.age : age;
+                    render();
+                    clearInputs();
+                    return;
+                }
+            }
+            alert('Học sinh không tồn tại.');
+        }
+
+        // Hàm xóa học sinh
+        function xoa() {
+            const id = parseInt(document.getElementById('idInput').value);
+
+            if (isNaN(id)) {
+                alert('Vui lòng nhập ID hợp lệ.');
+                return;
+            }
+
+            for (let i = 0; i < students.length; i++) {
+                if (students[i].id === id) {
+                    students.splice(i, 1);
+                    render();
+                    clearInputs();
+                    return;
+                }
+            }
+            alert('Học sinh không tồn tại.');
+        }
+
+        // Hàm xóa nội dung của các input
+        function clearInputs() {
+            document.getElementById('idInput').value = '';
+            document.getElementById('nameInput').value = '';
+            document.getElementById('ageInput').value = '';
+        }
+
+        // Hiển thị danh sách học sinh khi tải trang
+        render();
+    </script>
+</body>
+</html>

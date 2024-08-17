@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Sự kiện Cửa sổ trong JavaScript</title>
+    <style>
+        .output {
+            padding: 20px;
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Theo dõi sự kiện cửa sổ</h2>
+    <a href="demo_dom.html">rời trang</a>
+    
+
+    </div>
+    <div class="output" id="output">Thông tin sẽ hiển thị ở đây</div>
+
+    <a href="demo_dom.html">rời trang</a>
+
+    <div style="width: 500px;height: 3000px;background-color: red;"></div>
+    
+
+    <script>
+        const output = document.getElementById("output");
+
+        // Sự kiện khi tải trang hoàn tất
+        window.addEventListener("load", function() {
+            output.textContent = "Trang đã được tải xong!";
+            output.style.backgroundColor = "lightgreen";
+        });
+
+        // Sự kiện khi thay đổi kích thước cửa sổ
+        window.addEventListener("resize", function() {
+            output.textContent = `Kích thước cửa sổ: ${window.innerWidth} x ${window.innerHeight}`;
+            output.style.backgroundColor = "lightyellow";
+        });
+
+        // Sự kiện khi cuộn trang
+        window.addEventListener("scroll", function() {
+            output.textContent = `Vị trí cuộn: ${window.scrollX}, ${window.scrollY}`;
+            output.style.backgroundColor = "lightblue";
+        });
+
+        // Sự kiện khi người dùng cố gắng rời khỏi trang
+        window.addEventListener("beforeunload", function(event) {
+            // Cảnh báo trước khi rời khỏi trang
+            event.preventDefault();
+            event.returnValue = "Bạn có chắc chắn muốn rời khỏi trang?";
+        });
+
+        // Sự kiện khi trang bị rời khỏi
+        window.addEventListener("unload", function() {
+            output.textContent = "Trang đang được rời khỏi";
+            output.style.backgroundColor = "lightcoral";
+        });
+
+        window.addEventListener("beforeunload", function(event) {
+            console.log("roi trang")
+        
+            event.preventDefault(); // Ngăn chặn hành vi mặc định (không còn cần thiết trong các trình duyệt hiện đại)
+        
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      #test {
+        margin-bottom: 20px;
+      }
+      .container {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="test"></div>
+    <div class="container">
+      <input type="number" placeholder="ID" id="idInput" />
+      <input type="text" placeholder="Name" id="nameInput" />
+      <input type="text" placeholder="Age" id="age" />
+    </div>
+    <button onclick="them()">Thêm</button>
+    <button onclick="xoa()">Xóa</button>
+    <button onclick="sua()">Sửa</button>
+
+    <script>
+      const students = [
+        { id: 1, name: "Honda", age: 10 },
+        { id: 2, name: "yamaha", age: 9 },
+        { id: 3, name: "suzuki", age: 12 },
+      ];
+
+      function render() {
+        const test = document.getElementById("test");
+        test.innerHTML = "";
+        for (let i = 0; i < students.length; i++) {
+            const student = students[i];
+          const div = document.createElement("div");
+          div.textContent = `ID: ${student.id}, Name: ${student.name}, Age: ${student.age}`
+          test.appendChild(div);
+        }
+      }
+
+      render();
+    </script>
+  </body>
+</html>

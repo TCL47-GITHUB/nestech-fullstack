@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ Phần tử HTML</title>
+    <style>
+        .highlight {
+            color: blue;
+            font-weight: bold;
+        }
+        .custom-style {
+            background-color: lightyellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Nội dung văn bản -->
+    <p>Đây là nội dung văn bản.</p>
+    
+    <!-- 2. Các phần tử con -->
+    <div>
+        <h1>Tiêu đề</h1>
+        <p>Đoạn văn bản bên trong div.</p>
+    </div>
+    
+    <!-- 3. Các thuộc tính -->
+    <a href="https://example.com" target="_blank">Liên kết đến example.com</a>
+    
+    <!-- 4. Các dữ liệu thuộc tính -->
+    <div id="div" data-info="Thông tin tùy chỉnh">Nội dung với dữ liệu thuộc tính. 11111111111</div>
+    
+    <!-- 5. Nội dung HTML -->
+    <div>
+        <p>Đoạn văn bản với phần tử con:</p>
+        <a href="#">Liên kết</a>
+    </div>
+    
+    <!-- 6. Các Node của DOM -->
+    <!-- Các node ví dụ -->
+    <div>
+        <!-- Đây là một chú thích -->
+        <p>Đoạn văn bản trong div.</p>
+        <!-- Đây là một chú thích bên trong div -->
+    </div>
+    
+    <!-- 7. Thuộc tính Style -->
+    <div style="color: red; font-size: 20px;">
+        Nội dung có kiểu CSS inline.
+    </div>
+    
+    <!-- 8. Các thuộc tính JavaScript -->
+    <button onclick="alert('Nút được nhấn!')">Nhấn tôi</button>
+    
+    <script>
+        // Ví dụ JavaScript để kiểm tra các thuộc tính
+        // document.addEventListener('DOMContentLoaded', (event) => {
+        //     // Truy cập phần tử và in ra nội dung
+        //     const exampleDiv = document.querySelector('div');
+        //     console.log("Nội dung văn bản:", exampleDiv.textContent);
+        //     console.log("Nội dung HTML:", exampleDiv.innerHTML);
+        //     console.log("Thuộc tính class:", exampleDiv.getAttribute("class"));
+        //     console.log("Thuộc tính data-info:", exampleDiv.getAttribute("data-info"));
+        //     const exampleDiv1 = document.getElementById('div');
+
+        //     exampleDiv1.setAttribute("class", "456");
+        // });
+
+        const exampleDiv1 = document.getElementById('div');
+
+            exampleDiv1.setAttribute("class", "456");
+        const exampleDiv = document.getElementById('div');
+            console.log("Nội dung văn bản:", exampleDiv.textContent);
+            console.log("Nội dung HTML:", exampleDiv.innerHTML);
+
+            // exampleDiv.setAttribute("class", "123");
+            
+    console.log("Thuộc tính class:", exampleDiv.getAttribute("class"));
+            console.log("Thuộc tính class:", exampleDiv.getAttribute("class"));
+
+            console.log("Thuộc tính data-info:", exampleDiv.getAttribute("data-info"));
+    </script>
+</body>
+</html>

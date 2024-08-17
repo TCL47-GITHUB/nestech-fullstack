@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi Nội dung và Thuộc tính</title>
+    <style>
+        .output {
+            padding: 20px;
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Thay đổi Nội dung và Thuộc tính</h2>
+
+    <p id="paragraphId">Đoạn văn gốc</p>
+    <div id="container">
+        <p class="text">Nội dung gốc của div</p>
+    </div>
+    <button id="changeContent">Thay đổi Nội dung và Thuộc tính</button>
+
+    <div class="output" id="output">Thông tin sẽ hiển thị ở đây</div>
+
+    <script>
+        // Thay đổi nội dung HTML của phần tử bằng innerHTML
+        const paragraphById = document.getElementById("paragraphId");
+        paragraphById.innerHTML = "<strong>Đoạn văn đã được thay đổi với HTML mới!</strong>";
+
+        // Thay đổi nội dung văn bản của phần tử bằng textContent
+        const textElement = document.querySelector("#container .text");
+        textElement.textContent = "Nội dung văn bản đã được thay đổi.";
+
+        // Thay đổi thuộc tính của phần tử bằng setAttribute
+        const container = document.getElementById("container");
+        container.setAttribute("class", "newClass");
+        container.setAttribute("data-info", "Thông tin thêm");
+
+        // Thay đổi nội dung và thuộc tính khi nhấn nút
+        const output = document.getElementById("output");
+        document.getElementById("changeContent").addEventListener("click", function() {
+            // Thay đổi nội dung HTML của phần tử
+            output.innerHTML = "<em>Nội dung đã được thay đổi khi nhấn nút!</em>";
+            // Thay đổi nội dung văn bản của phần tử
+            output.textContent += " (Đã thêm nội dung văn bản)";
+            // Thay đổi thuộc tính của phần tử
+            output.setAttribute("style", "background-color: lightcoral; color: white;");
+        });
+    </script>
+</body>
+</html>

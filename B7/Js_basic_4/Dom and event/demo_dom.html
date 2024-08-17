@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <div class="abc mm" id="demo">
+
+        <h1>helo</h1>
+
+        <p>n1</p>
+
+    </div>
+</body>
+
+<script>
+    const demo = document.getElementById("demo")
+    let a  =  10
+    const students = [
+    { id: 1, name: 'Alice', age: 22 },
+    { id: 2, name: 'Bob', age: 25 },
+    { id: 3, name: 'Charlie', age: 23 }
+];
+
+    // demo.innerHTML = `helo ${a}`
+    // demo.innerHTML = '<p>xin chao</p>'
+
+    console.log(demo.getAttribute("class"))
+    demo.setAttribute("class", "tcl")
+
+    console.log(demo.getAttribute("class"))
+
+
+    // demo.textContent  = '<p>xin chao</p>'
+    // demo.innerText = '<p>xin chao</p>'
+//     console.log("1",demo.children)
+//     for (let number of demo.children) {
+//     console.log(number.nodeName);
+// }
+
+
+
+
+    // console.log("1",demo.innerHTML)
+    // console.log("2",demo.textContent)
+    // console.log("3",demo.innerText)
+
+</script>
+</html>

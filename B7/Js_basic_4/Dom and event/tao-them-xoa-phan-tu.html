@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm và Xóa Phần tử</title>
+    <style>
+        .output {
+            padding: 20px;
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Thêm và Xóa Phần tử</h2>
+
+    <div id="container">
+        <p>Đoạn văn 1</p>
+        <p>Đoạn văn 2</p>
+    </div>
+    <button id="addElement">Thêm Phần tử</button>
+    <button id="removeElement">Xóa Phần tử</button>
+    
+    <div class="output" id="output">Thông tin sẽ hiển thị ở đây</div>
+
+    <script>
+        // Thêm phần tử mới vào DOM
+        document.getElementById("addElement").addEventListener("click", function() {
+            // Tạo phần tử mới
+            const newParagraph = document.createElement("p");
+            // Thay đổi nội dung của phần tử mới
+            newParagraph.textContent = "Đoạn văn mới được thêm vào";
+            // Thêm phần tử mới vào DOM
+            const container = document.getElementById("container");
+            container.appendChild(newParagraph);
+        });
+
+        // Xóa phần tử con khỏi DOM
+        document.getElementById("removeElement").addEventListener("click", function() {
+            // Lấy phần tử cần xóa
+            const container = document.getElementById("container");
+            // Nếu có ít nhất một phần tử con
+            if (container.lastElementChild) {
+                container.removeChild(container.children[1]);
+            } else {
+                alert("Không còn phần tử nào để xóa!");
+            }
+        });
+    </script>
+</body>
+</html>
