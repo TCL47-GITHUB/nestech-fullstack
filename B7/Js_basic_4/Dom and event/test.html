@@ -3,11 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <title>Document</title>
     <style>
-      #test {
-        margin-bottom: 20px;
-      }
+      #test,
       .container {
         margin-bottom: 10px;
       }
@@ -16,9 +14,10 @@
   <body>
     <div id="test"></div>
     <div class="container">
-      <input type="number" placeholder="ID" id="idInput" />
-      <input type="text" placeholder="Name" id="nameInput" />
-      <input type="text" placeholder="Age" id="age" />
+      <input type="number" id="idInput" placeholder="ID" />
+      <input type="texxt" id="nameInput" placeholder="Name" />
+      <input type="number" id="ageInput" placeholder="Age" />
+      <input type="emal" id="emailInput" placeholder="Email" />
     </div>
     <button onclick="them()">Thêm</button>
     <button onclick="xoa()">Xóa</button>
@@ -26,22 +25,40 @@
 
     <script>
       const students = [
-        { id: 1, name: "Honda", age: 10 },
-        { id: 2, name: "yamaha", age: 9 },
-        { id: 3, name: "suzuki", age: 12 },
+        { id: 1, name: "Dương", age: 24, email: "tcl47@gmail.com" },
+        { id: 2, name: "Cẩn", age: 24, email: "tcl47@gmail.com" },
+        { id: 3, name: "Lý", age: 26, email: "tcl47@gmail.com" },
       ];
 
       function render() {
         const test = document.getElementById("test");
         test.innerHTML = "";
         for (let i = 0; i < students.length; i++) {
-            const student = students[i];
           const div = document.createElement("div");
-          div.textContent = `ID: ${student.id}, Name: ${student.name}, Age: ${student.age}`
+          div.textContent = `ID: ${students[i].id}; Name: ${students[i].name}; Age: ${students[i].age}; Email: ${students[i].email}`;
           test.appendChild(div);
         }
       }
+      function them() {
+        const id = parseInt(document.getElementById("idInput").value);
+        const name = document.getElementById("nameInput").value;
+        const age = parseInt(document.getElementById("ageInput").value);
+        const email = document.getElementById("emailInput").value;
+        students.push({ id, name, age, email });
+        render();
+        clearInput();
+      }
+      function xoa() {}
 
+      function clearInput() {
+        const container = document.getElementsByClassName("container");
+        for(let i = 0; i < container.length; i++){
+            const inputs  = container[i].getElementsByTagName('input');    
+            for (let j = 0; j < inputs.length; j++){ 
+                inputs[j].value = '';
+            }
+        }
+      }
       render();
     </script>
   </body>
