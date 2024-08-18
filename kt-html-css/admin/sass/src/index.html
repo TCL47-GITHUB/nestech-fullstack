@@ -15,74 +15,39 @@
     />
   </head>
   <body>
+    <main class="main">
+      <header>
+        <include src="html/header.html"></include>
+        <!-- <my-header></my-header> -->
+      </header>
 
-      <main class="main">
-        <header>
-          <include src="html/header.html"></include>
-          <!-- <my-header></my-header> -->
-        </header>
-        
-        <aside id="sideBar">
-          <include src="html/sidebar.html"></include>
-        </aside>
-        <div class="main-group">
-          <!-- <include src="html/main.html"></include> -->
-          <div class="card-body card-body-chart">
-            <div id="bar-chart-1" style="height:400px"></div>
-            <div id="bar-chart-2"  style="height:400px;"></div>
-          </div>
-          <my-main></my-main>
-          <footer>
-            <include src="html/footer.html"></include>
-          </footer>
-        </div>
-        <button class="btn-support-chat">
-          <i class="icon-mm-headphone-1"></i>
-          <span>Chat demo</span><i class="icon-mm-circle-fill"></i>
-        </button>
-      </main>
-      
+      <aside id="sideBar">
+        <include src="html/sidebar.html"></include>
+      </aside>
+      <div class="main-group">
+        <!-- <include src="html/main.html"></include> -->
+
+        <my-main></my-main>
+        <footer>
+          <include src="html/footer.html"></include>
+        </footer>
+      </div>
+      <button class="btn-support-chat">
+        <i class="icon-mm-headphone-1"></i>
+        <span>Chat demo</span><i class="icon-mm-circle-fill"></i>
+      </button>
+    </main>
+
     <script src="js/include-html.js"></script>
     <script src="js/main-component.js"></script>
     <script src="js/header-component.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-nightly@5.6.0-dev.20240812/dist/echarts.min.js"></script>
-    <script type="text/javascript">
-      var dom = document.getElementById('bar-chart-2');
-      var myChart = echarts.init(dom, null, {
-        renderer: 'canvas',
-        useDirtyRect: false
-      });
-      var app = {};
-      
-      var option;
-  
-      option = {
-    xAxis: {
-      type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    },
-    yAxis: {
-      type: 'value'
-    },
-    series: [
-      {
-        data: [120, 200, 150, 80, 70, 110, 130],
-        type: 'bar'
-      }
-    ]
-  };
-  
-      if (option && typeof option === 'object') {
-        myChart.setOption(option);
-      }
-      window.onload = function() {
-        myChart.resize;
-      };
+    <script
+      type="text/javascript"
+      src="https://fastly.jsdelivr.net/npm/echarts-nightly@5.6.0-dev.20240812/dist/echarts.min.js"
+    ></script>
 
-      window.addEventListener('resize', myChart.resize);
-    </script>
-<script src="js/chart.js"></script>
+    <script src="js/chart.js"></script>
     <!-- prismjs highlight code -->
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>

@@ -72,7 +72,9 @@ class Main extends HTMLElement {
   &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</code></pre>
 
-
+        <div class="card-body card-body-chart">
+            <div id="bar-chart-1" style="height:400px"></div>
+          </div>
 
 
       </div>
