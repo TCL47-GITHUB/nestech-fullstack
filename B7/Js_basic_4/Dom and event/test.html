@@ -44,19 +44,64 @@
         const name = document.getElementById("nameInput").value;
         const age = parseInt(document.getElementById("ageInput").value);
         const email = document.getElementById("emailInput").value;
-        students.push({ id, name, age, email });
-        render();
+
+        if (isNaN(id) || !name || isNaN(age)) {
+          alert("Vui lòng điền đầy đủ thông tin");
+        } else {
+          students.push({ id, name, age, email });
+          render();
+        }
         clearInput();
       }
-      function xoa() {}
+
+      function sua() {
+        const id = parseInt(document.getElementById("idInput").value);
+        const name = document.getElementById("nameInput").value;
+        const age = parseInt(document.getElementById("ageInput").value);
+        const email = document.getElementById("emailInput").value;
+
+        if (isNaN(id)) {
+          alert("Vui lòng nhập id hợp lệ");
+        } else {
+          for (let i = 0; i < students.length; i++) {
+            let student = students[i];
+            if (student.id === id) {
+              student.name = name || student.name;
+              student.age = isNaN(age) ? student.age : age;
+              student.email = email || student.email;
+              render();
+            }
+            clearInput();
+          }
+        }
+      }
+
+      function xoa() {
+        const id = parseInt(document.getElementById("idInput").value);
+        if (isNaN(id)) {
+          alert("Vui lòng nhập id hợp lệ");
+        } else {
+          for (let i = 0; i < students.length; i++) {
+            if (students[i].id === id) {
+              students.splice(i, 1);
+              render();
+              break;
+            } else {
+              alert("Học sinh không tồn tại.");
+            }
+          }
+        }
+
+        clearInput();
+      }
 
       function clearInput() {
         const container = document.getElementsByClassName("container");
-        for(let i = 0; i < container.length; i++){
-            const inputs  = container[i].getElementsByTagName('input');    
-            for (let j = 0; j < inputs.length; j++){ 
-                inputs[j].value = '';
-            }
+        for (let i = 0; i < container.length; i++) {
+          const inputs = container[i].getElementsByTagName("input");
+          for (let j = 0; j < inputs.length; j++) {
+            inputs[j].value = "";
+          }
         }
       }
       render();
