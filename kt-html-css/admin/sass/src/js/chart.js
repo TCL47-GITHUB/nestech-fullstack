@@ -85,3 +85,49 @@ window.onload = function () {
 
 
 
+
+
+var chartDom = document.getElementById('bar-chart-2');
+
+var myChart = echarts.init(chartDom, null, {
+  renderer: "svg",
+  useDirtyRect: false,
+  width: 'auto',
+  height: '400',
+});
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+  tooltip: {
+    formatter: '{a} <br/>{b} : {c}%'
+  },
+  series: [
+    {
+      name: 'Pressure',
+      type: 'gauge',
+      progress: {
+        show: true
+      },
+      detail: {
+        valueAnimation: true,
+        formatter: '{value}'
+      },
+      data: [
+        {
+          value: 50,
+          name: 'SCORE'
+        }
+      ]
+    }
+  ]
+};
+
+option && myChart.setOption(option);
+
+window.addEventListener("resize", myChart.resize);
+window.onload = function () {
+  myChart.resize();
+};
+
+

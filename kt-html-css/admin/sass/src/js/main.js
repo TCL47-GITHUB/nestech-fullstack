@@ -29,10 +29,10 @@ function toggleContent(buttonId, contentId) {
 
     if (computedStyle.display === "none") {
         content.style.display = "block";
-        button.innerHTML = '<i class="icon-mm-eye-off"></i> Hide code';
+        button.innerHTML = '<i class="mm-1 icon1-eye-off"></i> Hide code';
     } else {
         content.style.display = "none";
-        button.innerHTML = '<i class="icon-mm-eye"></i> View code';
+        button.innerHTML = '<i class="mm-1 icon1-eye"></i> View code';
     }
 }
 

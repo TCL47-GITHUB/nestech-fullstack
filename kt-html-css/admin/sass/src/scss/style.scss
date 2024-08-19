@@ -4,7 +4,9 @@
 @import 'main';
 @import 'footer';
 @import 'variables';
-
+* {
+    scroll-behavior: smooth;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     background: $body-bg;
@@ -74,8 +76,8 @@ summary::marker {
 }
 
 summary::before {
-    content: '\e937'; /* Icon Font Awesome (mũi tên xuống) */
-    font-family: 'font-icon-maumau' !important;
+    content: '\a10c'; /* Icon Font Awesome (mũi tên xuống) */
+    font-family: 'font-icon-set1-mm' !important;
     font-weight: 900;
     margin-right: 4px;
     font-size: 0.625em;

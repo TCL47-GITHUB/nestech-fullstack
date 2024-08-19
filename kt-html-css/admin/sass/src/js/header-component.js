@@ -9,7 +9,7 @@ class Header extends HTMLElement {
     </div>
 
     <div class="header-search">
-      <i class="icon-mm-search"></i>
+      <i class="mm-1 icon1-search"></i>
       <form action="">
         <input type="text" placeholder="Search..." />
       </form>
@@ -17,13 +17,13 @@ class Header extends HTMLElement {
 
     <ul class="header-right">
       <li>
-        <div><i class="icon-mm-instagram"></i></div>
+        <div><i class="mm-1 icon1-instagram"></i></div>
       </li>
       <li>
-        <div><i class="icon-mm-bell"></i></div>
+        <div><i class="mm-1 icon1-bell"></i></div>
       </li>
       <li>
-        <div><i class="icon-mm-grid"></i></div>
+        <div><i class="mm-1 icon1-grid"></i></div>
       </li>
       <li>
         <a onclick="toggleShowHide('dropdownProfile')" class="avatar" href="#!">
@@ -49,37 +49,37 @@ class Header extends HTMLElement {
             <div class="parent-wrapper">
               <ul>
                 <li class="nav-item">
-                  <i class="icon-mm-user-2"></i>
+                  <i class="mm-1 icon1-user-2"></i>
                   <a class="nav-link" href="#!">
                     <span>Profile</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <i class="icon-mm-analysis"></i>
+                  <i class="mm-1 icon1-analysis"></i>
                   <a class="nav-link" href="#!">
                     <span>Dashboard</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <i class="icon-mm-locked"></i>
+                  <i class="mm-1 icon1-locked"></i>
                   <a class="nav-link" href="#!">
                     <span>Posts & Activity</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <i class="icon-mm-settings"></i>
+                  <i class="mm-1 icon1-settings"></i>
                   <a class="nav-link" href="#!">
                     <span>Settings & Privacy</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <i class="icon-mm-help-circle"></i>
+                  <i class="mm-1 icon1-help-circle"></i>
                   <a class="nav-link" href="#!">
                     <span>Help Center</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <i class="icon-mm-shield"></i>
+                  <i class="mm-1 icon1-shield"></i>
                   <a class="nav-link" href="#!">
                     <span>Language</span>
                   </a>
@@ -89,7 +89,7 @@ class Header extends HTMLElement {
             <div class="card-footer">
               <ul class="nav">
                 <li class="nav-item">
-                  <i class="icon-mm-user-2"></i>
+                  <i class="mm-1 icon1-user-2"></i>
                   <a class="nav-link" href="#!">
                     <span>Add other acconut</span>
                   </a>
@@ -97,7 +97,7 @@ class Header extends HTMLElement {
               </ul>
               <div class="sign-out">
                 <a class="btn btn-secondary btn--center" href="#!">
-                  <i class="icon-mm-log-out"></i>Sign out</a
+                  <i class="mm-1 icon1-log-out"></i>Sign out</a
                 >
               </div>
               <div class="card-footer-nav">

@@ -6,22 +6,22 @@ class Main extends HTMLElement {
   <div class="wrapper">
     <div class="left">
       <!-- Echart/Bar -->
-      <div id="stackedBar" class="card">
+      <div id="eCharts" class="card">
         <div class="card-header">
-          <h4 >Stacked Bar</h4>
+          <h4 >Charts</h4>
           <nav class="nav doc-tab-nav">
             <button onclick="copyContent('content')"
               class="btn btn-link px-2 text-body copy-code-btn"
               type="button"
             >
-              <i class="icon-mm-copy"></i>Copy Code
+              <i class="mm-1 icon1-copy"></i>Copy Code
             </button>
-            <a id="btnViewCode" onclick="toggleContent('btnViewCode','content')" class="btn code-btn collapsed"  href="#basic-form-code">
-              <i class="icon-mm-eye"></i>
+            <a id="btnViewCodeChart" onclick="toggleContent('btnViewCodeChart','contentChart')" class="btn code-btn collapsed"  href="#!">
+              <i class="mm-1 icon1-eye"></i>
               View code</a>      
           </nav>
         </div>
-         <pre id="content" class="language-markup view-code"><code>&lt;form&gt;
+         <pre id="contentChart" class="language-markup view-code"><code>&lt;form&gt;
   &lt;div class="mb-3"&gt;
     &lt;label class="form-label" for="basic-form-name"&gt;Name&lt;/label&gt;
     &lt;input class="form-control" id="basic-form-name" type="text" placeholder="Name"&gt;
@@ -88,14 +88,14 @@ class Main extends HTMLElement {
               class="btn btn-link px-2 text-body copy-code-btn"
               type="button"
             >
-              <i class="icon-mm-copy"></i>Copy Code
+              <i class="mm-1 icon1-copy"></i>Copy Code
             </button>
-            <a id="btnViewCode" onclick="toggleContent('btnViewCode','content')" class="btn code-btn collapsed"  href="#basic-form-code">
-              <i class="icon-mm-eye"></i>
+            <a id="btnViewCodeForm" onclick="toggleContent('btnViewCodeForm','contentForm')" class="btn code-btn collapsed"  href="#!">
+              <i class="mm-1 icon1-eye"></i>
               View code</a>      
           </nav>
         </div>
-         <pre id="content" class="language-markup view-code"><code>&lt;form&gt;
+         <pre id="contentForm" class="language-markup view-code"><code>&lt;form&gt;
   &lt;div class="mb-3"&gt;
     &lt;label class="form-label" for="basic-form-name"&gt;Name&lt;/label&gt;
     &lt;input class="form-control" id="basic-form-name" type="text" placeholder="Name"&gt;
@@ -255,7 +255,7 @@ class Main extends HTMLElement {
         </div>
       </div>
       <!-- Accented tables -->
-      <div class="card">
+      <div id="accentedTables" class="card">
         <div class="card-header">
           <h4>Accented tables</h4>
           <nav class="nav doc-tab-nav">
@@ -263,14 +263,14 @@ class Main extends HTMLElement {
               class="btn btn-link px-2 text-body copy-code-btn"
               type="button"
             >
-              <i class="icon-mm-copy"></i>Copy Code
+              <i class="mm-1 icon1-copy"></i>Copy Code
             </button>
-            <a id="btnViewCode1" onclick="toggleContent('btnViewCode1','content1')" class="btn code-btn collapsed"  href="#basic-form-code">
-              <i class="icon-mm-eye"></i>
+            <a id="btnViewCodeTables" onclick="toggleContent('btnViewCodeTables','contentTables')" class="btn code-btn collapsed"  href="#basic-form-code">
+              <i class="mm-1 icon1-eye"></i>
               View code</a>      
           </nav>
         </div>
-        <pre id="content1" class="language-markup view-code"><code>&lt;thead&gt;
+        <pre id="contentTables" class="language-markup view-code"><code>&lt;thead&gt;
     &lt;tr&gt;
       &lt;th scope="col"&gt;#&lt;/th&gt;
       &lt;th scope="col"&gt;First&lt;/th&gt;
@@ -460,8 +460,8 @@ class Main extends HTMLElement {
         <h5>On this page</h5>
         <ul>
           <li class="nav-item">
-            <a class="nav-link" href="#stackedBar">
-              <span>Stacked Bar</span>
+            <a class="nav-link" href="#eCharts">
+              <span>Charts</span>
             </a>
           </li>
           <li class="nav-item">
@@ -470,8 +470,8 @@ class Main extends HTMLElement {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#!">
-              <span>Horizontal form</span>
+            <a class="nav-link" href="#accentedTables">
+              <span>Accented tables</span>
             </a>
           </li>
           <li class="nav-item">
