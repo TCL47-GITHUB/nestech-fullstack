@@ -32,7 +32,208 @@
           <include src="html/footer.html"></include>
         </footer>
       </div>
-      <div class="settings-container">
+      <div id="overlaySettings" class="overlay-settings">
+        <div class="left" onclick="hideSettings('overlaySettings')" ></div>
+        <div class="settings-panel">
+          <div class="settings-header">
+            <div class="settings-header--top">
+              <div class="settings-header--group">
+                <div>
+                  <i class="mm-1 icon1-solid-color-lens"></i>
+                  <h5>Theme Customizer</h5>
+                </div>
+                <p>Explore different styles according to your preferences</p>
+              </div>
+              <div class="close" onclick="hideSettings('overlaySettings')"><i class="mm-1 icon1-times"></i></div>
+            </div>
+            <div class="reset-default">
+              <a class="btn btn-secondary btn--center" href="#!">
+                <i class="mm-1 icon1-sync"></i>Reset to default</a
+              >
+            </div>
+          </div>
+          <div class="settings-body">
+            <!--  Color Scheme -->
+            <div class="setting-panel-item">
+              <h5 class="setting-panel-item-title">Color Scheme</h5>
+              <div class="color-scheme-group">
+                <div class="color-scheme--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="theme-color"
+                    value="light"
+                    id="themeLight"
+                    checked
+                  />
+                  <label for="themeLight">
+                    <img src="assets/img/default-light.png" alt="" />
+                    <span class="label-text">Light</span>
+                  </label>
+                </div>
+                <div class="color-scheme--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="theme-color"
+                    value="dark"
+                    id="themeDark"
+                  />
+                  <label for="themeDark">
+                    <img src="assets/img/default-dark.png" alt="" />
+                    <span class="label-text">Dark</span>
+                  </label>
+                </div>
+                <div class="color-scheme--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="theme-color"
+                    value="auto"
+                    id="themeAuto"
+                  />
+                  <label for="themeAuto">
+                    <img src="assets/img/auto.png" alt="" />
+                    <span class="label-text">Auto</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!--  Navigation Type -->
+            <div class="setting-panel-item">
+              <h5 class="setting-panel-item-title">Navigation Type</h5>
+              <div class="nav-bar-group">
+                <div class="nav-bar--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="nav-type"
+                    value="Vertical"
+                    id="navVertical"
+                    checked
+                  />
+                  <label for="navVertical">
+                    <img src="assets/img/default-light.png" alt="" />
+                    <span class="label-text">Vertical</span>
+                  </label>
+                </div>
+                <div class="nav-bar--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="nav-type"
+                    value="Horizontal"
+                    id="navHorizontal"
+                  />
+                  <label for="navHorizontal">
+                    <img src="assets/img/top-default.png" alt="" />
+                    <span class="label-text">Horizontal</span>
+                  </label>
+                </div>
+                <div class="nav-bar--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="nav-type"
+                    value="Combo"
+                    id="navCombo"
+                  />
+                  <label for="navCombo">
+                    <img src="assets/img/default-light.png" alt="" />
+                    <span class="label-text">Combo</span>
+                  </label>
+                </div>
+                <div class="nav-bar--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="nav-type"
+                    value="Dual nav"
+                    id="navDual"
+                  />
+                  <label for="navDual">
+                    <img src="assets/img/top-default.png" alt="" />
+                    <span class="label-text">Dual nav</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!--  Vertical Navbar Appearance -->
+            <div class="setting-panel-item">
+              <h5 class="setting-panel-item-title">Vertical Navbar Appearance</h5>
+              <div class="nav-bar-group">
+                <div class="nav-bar--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="nav-appearance"
+                    value="Default"
+                    id="navAppearanceDefault"
+                    checked
+                  />
+                  <label for="navAppearanceDefault">
+                    <img src="assets/img/default-light.png" alt="" />
+                    <span class="label-text">Default</span>
+                  </label>
+                </div>
+                <div class="nav-bar--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="nav-appearance"
+                    value="Darker"
+                    id="navAppearanceDarker"
+                  />
+                  <label for="navAppearanceDarker">
+                    <img src="assets/img/vertical-darker.png" alt="" />
+                    <span class="label-text">Darker</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!--  Horizontal Navbar Shape -->
+            <div class="setting-panel-item">
+              <h5 class="setting-panel-item-title">Horizontal Navbar Shape</h5>
+              <div class="nav-bar-group">
+                <div class="nav-bar--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="nav-sharp"
+                    value="Default"
+                    id="navSharpDefault"
+                    checked
+                  />
+                  <label for="navSharpDefault">
+                    <img src="assets/img/default-light.png" alt="" />
+                    <span class="label-text">Default</span>
+                  </label>
+                </div>
+                <div class="nav-bar--item">
+                  <input
+                    class="btn-check"
+                    type="radio"
+                    name="nav-sharp"
+                    value="Slim"
+                    id="navSharpSlim"
+                  />
+                  <label for="navSharpSlim">
+                    <img src="assets/img/vertical-darker.png" alt="" />
+                    <span class="label-text">Slim</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+       
+              <a href="#!" class="btn btn-primary btn--center">
+                Purchase template
+              </a>
+
+          </div>
+        </div>
+      </div>
+
+      <div onclick="showSettings('overlaySettings')" class="settings-container">
         <i class="mm-1 icon1-solid-settings"></i>
         <small class="settings-label">Customize</small>
       </div>

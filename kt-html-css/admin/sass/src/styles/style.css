@@ -77,8 +77,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -320,7 +319,7 @@ header nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 99;
 }
 header nav .header {
   display: flex;
@@ -336,7 +335,7 @@ header nav .header .header-logo {
   align-items: center;
   gap: 8px;
 }
-header nav .header .header-logo .mm-1 icon1-menu {
+header nav .header .header-logo .mm-1.icon1-menu {
   font-size: 24px;
   font-weight: 600;
   display: none;
@@ -443,10 +442,6 @@ header nav .header .dropdown-profile .card .card-body div .form-control {
   border: 1px solid #CBD0DD;
   border-radius: 6px;
   color: #525B75;
-}
-header nav .header .dropdown-profile .card .card-body div .form-control::-moz-placeholder {
-  color: #8A94AD;
-  opacity: 0.8;
 }
 header nav .header .dropdown-profile .card .card-body div .form-control::placeholder {
   color: #8A94AD;
@@ -679,6 +674,7 @@ aside nav:hover {
 }
 .main .settings-container {
   position: fixed;
+  z-index: 40;
   align-items: center;
   right: 0;
   top: 50%;
@@ -689,6 +685,7 @@ aside nav:hover {
   border: 1px solid #CBD0DD;
   transform: rotate(-90deg) translate3d(30px, 39px, 0);
   background-color: #fff;
+  cursor: pointer;
 }
 .main .settings-container i {
   color: #3874FF;
@@ -705,6 +702,178 @@ aside nav:hover {
   to {
     transform: rotate(360deg);
   }
+}
+.main #overlaySettings {
+  display: none;
+}
+.main .overlay-settings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5568627451);
+}
+.main .overlay-settings .left {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  cursor: pointer;
+}
+.main .overlay-settings .settings-panel {
+  max-width: 28rem;
+  min-width: 24rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow: scroll;
+}
+.main .overlay-settings .settings-panel .settings-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid #CBD0DD;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+.main .overlay-settings .settings-panel .settings-header .settings-header--top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.main .overlay-settings .settings-panel .settings-header .settings-header--top .settings-header--group div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.main .overlay-settings .settings-panel .settings-header .settings-header--top .settings-header--group div h5 {
+  margin: unset;
+}
+.main .overlay-settings .settings-panel .settings-header .settings-header--top .settings-header--group p {
+  font-size: 12px;
+  color: #525B75;
+}
+.main .overlay-settings .settings-panel .settings-header .settings-header--top .close {
+  cursor: pointer;
+  font-size: 24px;
+}
+.main .overlay-settings .settings-panel .settings-header .reset-default a {
+  font-weight: 600;
+  font-size: 13px;
+}
+.main .overlay-settings .settings-panel .settings-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item {
+  padding: 1.5rem;
+  border: 1px solid #CBD0DD;
+  border-radius: 10px;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item h5 {
+  margin: unset;
+  margin-bottom: 0.5rem;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .color-scheme-group {
+  display: flex;
+  gap: 1rem;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .color-scheme-group .color-scheme--item .btn-check {
+  display: none;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .color-scheme-group .color-scheme--item .btn-check:checked + label img {
+  border-color: #3874FF;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .color-scheme-group .color-scheme--item .btn-check:checked + label .label-text::after {
+  border: 5px solid #3874FF;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .color-scheme-group .color-scheme--item label {
+  cursor: pointer;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .color-scheme-group .color-scheme--item label img {
+  width: 100%;
+  border: 2px solid #CBD0DD;
+  border-radius: 8px;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .color-scheme-group .color-scheme--item label .label-text {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .color-scheme-group .color-scheme--item label .label-text::after {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #CBD0DD;
+  border-radius: 50%;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: border 0.2s ease;
+  -o-transition: border 0.2s ease;
+  transition: border 0.2s ease;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0.5rem;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group .nav-bar--item {
+  flex: 0 0 auto;
+  width: calc(50% - 0.25rem);
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group .nav-bar--item .btn-check {
+  display: none;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group .nav-bar--item .btn-check:checked + label img {
+  border-color: #3874FF;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group .nav-bar--item .btn-check:checked + label .label-text::after {
+  border: 5px solid #3874FF;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group .nav-bar--item label {
+  cursor: pointer;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group .nav-bar--item label img {
+  width: 100%;
+  border: 2px solid #CBD0DD;
+  border-radius: 8px;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group .nav-bar--item label .label-text {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.main .overlay-settings .settings-panel .settings-body .setting-panel-item .nav-bar-group .nav-bar--item label .label-text::after {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #CBD0DD;
+  border-radius: 50%;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: border 0.2s ease;
+  -o-transition: border 0.2s ease;
+  transition: border 0.2s ease;
 }
 .main .btn-support-chat {
   position: fixed;
@@ -776,8 +945,12 @@ aside nav:hover {
   background-color: transparent;
   border: none;
   display: inline-flex;
+  align-items: center;
   gap: 4px;
   cursor: pointer;
+}
+.container .wrapper .left .card .card-header .nav .copy-code-btn span {
+  margin-top: 3px;
 }
 .container .wrapper .left .card .card-header .nav .code-btn {
   display: inline-flex;
@@ -836,10 +1009,6 @@ aside nav:hover {
   border: 1px solid #CBD0DD;
   border-radius: 6px;
   color: #525B75;
-}
-.container .wrapper .left .card .form .form-item .form-control::-moz-placeholder {
-  color: #8A94AD;
-  opacity: 0.8;
 }
 .container .wrapper .left .card .form .form-item .form-control::placeholder {
   color: #8A94AD;
@@ -1037,6 +1206,7 @@ a {
   vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
@@ -1092,17 +1262,16 @@ summary::marker {
 }
 
 summary::before {
-  content: "ꄌ"; /* Icon Font Awesome (mũi tên xuống) */
+  content: "ꄍ"; /* Icon caret-right */
   font-family: "font-icon-set1-mm" !important;
   font-weight: 900;
   margin-right: 4px;
   font-size: 0.625em;
-  transform: rotate(270deg);
   transition: transform 300ms ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
 details[open] > summary::before {
-  transform: rotate(180deg); /* Xoay biểu tượng 180 độ khi mở */
+  transform: rotate(90deg); /* Xoay biểu tượng 180 độ khi mở */
 }
 
 h4, .h4 {
@@ -1125,4 +1294,4 @@ table {
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
-}
+}/*# sourceMappingURL=style.css.map */

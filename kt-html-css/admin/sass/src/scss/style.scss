@@ -76,17 +76,16 @@ summary::marker {
 }
 
 summary::before {
-    content: '\a10c'; /* Icon Font Awesome (mũi tên xuống) */
+    content: '\a10d'; /* Icon caret-right */
     font-family: 'font-icon-set1-mm' !important;
     font-weight: 900;
     margin-right: 4px;
     font-size: 0.625em;
-    transform: rotate(270deg);
     transition: transform 300ms ease; /* Thêm hiệu ứng chuyển đổi */
 }
 
 details[open] > summary::before {
-    transform: rotate(180deg); /* Xoay biểu tượng 180 độ khi mở */
+    transform: rotate(90deg); /* Xoay biểu tượng 180 độ khi mở */
 }
 
 

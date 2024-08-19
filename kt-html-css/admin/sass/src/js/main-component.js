@@ -10,11 +10,11 @@ class Main extends HTMLElement {
         <div class="card-header">
           <h4 >Charts</h4>
           <nav class="nav doc-tab-nav">
-            <button onclick="copyContent('content')"
+            <button onclick="copyContent('contentChart')"
               class="btn btn-link px-2 text-body copy-code-btn"
               type="button"
             >
-              <i class="mm-1 icon1-copy"></i>Copy Code
+              <i class="mm-1 icon1-copy"></i><span>Copy Code</span>
             </button>
             <a id="btnViewCodeChart" onclick="toggleContent('btnViewCodeChart','contentChart')" class="btn code-btn collapsed"  href="#!">
               <i class="mm-1 icon1-eye"></i>
@@ -84,11 +84,11 @@ class Main extends HTMLElement {
         <div class="card-header">
           <h4>Basic form</h4>
           <nav class="nav doc-tab-nav">
-            <button onclick="copyContent('content')"
+            <button onclick="copyContent('contentForm')"
               class="btn btn-link px-2 text-body copy-code-btn"
               type="button"
             >
-              <i class="mm-1 icon1-copy"></i>Copy Code
+              <i class="mm-1 icon1-copy"></i><span>Copy Code</span>
             </button>
             <a id="btnViewCodeForm" onclick="toggleContent('btnViewCodeForm','contentForm')" class="btn code-btn collapsed"  href="#!">
               <i class="mm-1 icon1-eye"></i>
@@ -259,11 +259,11 @@ class Main extends HTMLElement {
         <div class="card-header">
           <h4>Accented tables</h4>
           <nav class="nav doc-tab-nav">
-            <button onclick="copyContent('content1')"
+            <button onclick="copyContent('contentTables')"
               class="btn btn-link px-2 text-body copy-code-btn"
               type="button"
             >
-              <i class="mm-1 icon1-copy"></i>Copy Code
+              <i class="mm-1 icon1-copy"></i><span>Copy Code</span>
             </button>
             <a id="btnViewCodeTables" onclick="toggleContent('btnViewCodeTables','contentTables')" class="btn code-btn collapsed"  href="#basic-form-code">
               <i class="mm-1 icon1-eye"></i>
