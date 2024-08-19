@@ -96,6 +96,7 @@
         .card-body-chart{
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
+          // gap: 2rem;
           #bar-chart-1{
             width: 100%;
           }

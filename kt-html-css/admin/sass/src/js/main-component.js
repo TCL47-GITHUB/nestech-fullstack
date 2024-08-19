@@ -6,9 +6,9 @@ class Main extends HTMLElement {
   <div class="wrapper">
     <div class="left">
       <!-- Echart/Bar -->
-      <div class="card">
+      <div id="stackedBar" class="card">
         <div class="card-header">
-          <h4>Stacked Bar</h4>
+          <h4 >Stacked Bar</h4>
           <nav class="nav doc-tab-nav">
             <button onclick="copyContent('content')"
               class="btn btn-link px-2 text-body copy-code-btn"
@@ -73,13 +73,14 @@ class Main extends HTMLElement {
 &lt;/form&gt;</code></pre>
 
         <div class="card-body card-body-chart">
-            <div id="bar-chart-1" style="height:400px"></div>
+            <div id="bar-chart-1"></div>
+            <div id="bar-chart-2"></div>
           </div>
 
 
       </div>
       <!-- Basic form -->
-      <div class="card">
+      <div id="basicForm" class="card">
         <div class="card-header">
           <h4>Basic form</h4>
           <nav class="nav doc-tab-nav">
@@ -452,12 +453,19 @@ class Main extends HTMLElement {
         </div>
       </div>
     </div>
+
+
     <div class="right">
       <div class="parent-wrapper">
         <h5>On this page</h5>
         <ul>
           <li class="nav-item">
-            <a class="nav-link" href="#!">
+            <a class="nav-link" href="#stackedBar">
+              <span>Stacked Bar</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#basicForm">
               <span>Basic form</span>
             </a>
           </li>

@@ -3,6 +3,8 @@ var dom = document.getElementById("bar-chart-1");
 var myChart1 = echarts.init(dom, null, {
   renderer: "svg",
   useDirtyRect: false,
+  width: 'auto',
+  height: '400',
 });
 var app = {};
 
@@ -80,5 +82,6 @@ window.addEventListener("resize", myChart1.resize);
 window.onload = function () {
   myChart1.resize();
 };
+
 
 
