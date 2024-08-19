@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="username">Username (min 5 characters):</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const usernameInput = document.getElementById('username');
+
+        // Sự kiện submit
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault(); // Ngăn gửi biểu mẫu
+                console.log('Form is invalid.');
+            }
+        });
+
+        // Sự kiện input
+        usernameInput.addEventListener('input', function() {
+            console.log('Username input changed:', this.value);
+        });
+
+        // Sự kiện change
+        document.getElementById('email').addEventListener('change', function() {
+            console.log('Email changed:', this.value);
+        });
+
+        // Sự kiện focus
+        usernameInput.addEventListener('focus', function() {
+            console.log('Username field focused.');
+        });
+
+        // Sự kiện blur
+        usernameInput.addEventListener('blur', function() {
+            console.log('Username field lost focus.');
+        });
+
+        // Sự kiện reset
+        form.addEventListener('reset', function() {
+            console.log('Form has been reset.');
+        });
+
+        // Sự kiện invalid
+        usernameInput.addEventListener('invalid', function(event) {
+            console.log('Invalid input detected.');
+            event.preventDefault(); // Ngăn lỗi mặc định của trình duyệt
+        });
+    </script>
+</body>
+</html>

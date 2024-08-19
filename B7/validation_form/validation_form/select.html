@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Box Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="fruitSelect">Choose a fruit:</label>
+        <select id="fruitSelect" name="fruit">
+            <option value="Apple">Apple</option>
+            <option value="Banana">Banana</option>
+            <option value="Cherry">Cherry</option>
+        </select>
+        <br>
+        <button type="button" onclick="getSelectedFruit()">Get Selected Fruit</button>
+    </form>
+
+    <script>
+        function getSelectedFruit() {
+            const selectBox = document.getElementById('fruitSelect');
+            const selectedValue = selectBox.value;
+            console.log('Selected fruit:', selectedValue);
+        }
+    </script>
+</body>
+</html>

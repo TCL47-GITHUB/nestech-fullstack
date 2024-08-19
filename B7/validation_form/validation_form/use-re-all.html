@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Examples</title>
+    <style>
+        .result { margin: 10px 0; }
+        .true { color: green; }
+        .false { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Regex Examples</h1>
+    <div id="results"></div>
+
+    <script>
+        const resultsDiv = document.getElementById('results');
+
+        // Ký tự cơ bản (Literals)
+        const basicLiteral = /a/;
+        const basicTestString = 'apple';
+        const basicResult = basicLiteral.test(basicTestString);
+        const basicResultClass = basicResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Basic Literals:</strong>
+                <p>Biểu thức chính quy: <code>/a/</code></p>
+                <p>Chuỗi kiểm tra: <code>${basicTestString}</code></p>
+                <p>Kết quả: <span class="${basicResultClass}">${basicResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với ký tự "a" trong chuỗi. Kết quả: ${basicResult ? 'true' : 'false'} vì "${basicTestString}" chứa "a".</p>
+            </div>
+        `;
+
+        // Ký tự đặc biệt (Metacharacters)
+        const anyCharacter = /a.b/;
+        const anyTestString = 'acb';
+        const anyResult = anyCharacter.test(anyTestString);
+        const anyResultClass = anyResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Any Character:</strong>
+                <p>Biểu thức chính quy: <code>/a.b/</code></p>
+                <p>Chuỗi kiểm tra: <code>${anyTestString}</code></p>
+                <p>Kết quả: <span class="${anyResultClass}">${anyResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với "a" theo sau là bất kỳ ký tự nào và sau đó là "b". Kết quả: ${anyResult ? 'true' : 'false'} vì "${anyTestString}" khớp với mẫu này.</p>
+            </div>
+        `;
+
+        const digit = /\d/;
+        const digitTestString = 'abc123';
+        const digitResult = digit.test(digitTestString);
+        const digitResultClass = digitResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Digit:</strong>
+                <p>Biểu thức chính quy: <code>/\\d/</code></p>
+                <p>Chuỗi kiểm tra: <code>${digitTestString}</code></p>
+                <p>Kết quả: <span class="${digitResultClass}">${digitResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ chữ số nào. Kết quả: ${digitResult ? 'true' : 'false'} vì "${digitTestString}" chứa chữ số.</p>
+            </div>
+        `;
+
+        const nonDigit = /\D/;
+        const nonDigitTestString = 'abc123';
+        const nonDigitResult = nonDigit.test(nonDigitTestString);
+        const nonDigitResultClass = nonDigitResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Non-Digit:</strong>
+                <p>Biểu thức chính quy: <code>/\\D/</code></p>
+                <p>Chuỗi kiểm tra: <code>${nonDigitTestString}</code></p>
+                <p>Kết quả: <span class="${nonDigitResultClass}">${nonDigitResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ ký tự nào không phải chữ số. Kết quả: ${nonDigitResult ? 'true' : 'false'} vì "${nonDigitTestString}" chứa ký tự không phải chữ số.</p>
+            </div>
+        `;
+
+        const wordCharacter = /\w/;
+        const wordCharacterTestString = 'abc123';
+        const wordCharacterResult = wordCharacter.test(wordCharacterTestString);
+        const wordCharacterResultClass = wordCharacterResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Word Character:</strong>
+                <p>Biểu thức chính quy: <code>/\\w/</code></p>
+                <p>Chuỗi kiểm tra: <code>${wordCharacterTestString}</code></p>
+                <p>Kết quả: <span class="${wordCharacterResultClass}">${wordCharacterResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ ký tự chữ cái hoặc chữ số. Kết quả: ${wordCharacterResult ? 'true' : 'false'} vì "${wordCharacterTestString}" chứa các ký tự này.</p>
+            </div>
+        `;
+
+        const nonWordCharacter = /\W/;
+        const nonWordCharacterTestString = 'abc!@#';
+        const nonWordCharacterResult = nonWordCharacter.test(nonWordCharacterTestString);
+        const nonWordCharacterResultClass = nonWordCharacterResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Non-Word Character:</strong>
+                <p>Biểu thức chính quy: <code>/\\W/</code></p>
+                <p>Chuỗi kiểm tra: <code>${nonWordCharacterTestString}</code></p>
+                <p>Kết quả: <span class="${nonWordCharacterResultClass}">${nonWordCharacterResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ ký tự nào không phải chữ cái hoặc chữ số. Kết quả: ${nonWordCharacterResult ? 'true' : 'false'} vì "${nonWordCharacterTestString}" chứa ký tự đặc biệt.</p>
+            </div>
+        `;
+
+        const whitespace = /\s/;
+        const whitespaceTestString = 'Hello World';
+        const whitespaceResult = whitespace.test(whitespaceTestString);
+        const whitespaceResultClass = whitespaceResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Whitespace:</strong>
+                <p>Biểu thức chính quy: <code>/\\s/</code></p>
+                <p>Chuỗi kiểm tra: <code>${whitespaceTestString}</code></p>
+                <p>Kết quả: <span class="${whitespaceResultClass}">${whitespaceResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ ký tự khoảng trắng nào. Kết quả: ${whitespaceResult ? 'true' : 'false'} vì "${whitespaceTestString}" chứa khoảng trắng.</p>
+            </div>
+        `;
+
+        const nonWhitespace = /\S/;
+        const nonWhitespaceTestString = 'Hello World';
+        const nonWhitespaceResult = nonWhitespace.test(nonWhitespaceTestString);
+        const nonWhitespaceResultClass = nonWhitespaceResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Non-Whitespace:</strong>
+                <p>Biểu thức chính quy: <code>/\\S/</code></p>
+                <p>Chuỗi kiểm tra: <code>${nonWhitespaceTestString}</code></p>
+                <p>Kết quả: <span class="${nonWhitespaceResultClass}">${nonWhitespaceResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ ký tự nào không phải khoảng trắng. Kết quả: ${nonWhitespaceResult ? 'true' : 'false'} vì "${nonWhitespaceTestString}" chứa các ký tự không phải khoảng trắng.</p>
+            </div>
+        `;
+
+        const wordBoundary = /\bword\b/;
+        const wordBoundaryTestString = 'This is a word.';
+        const wordBoundaryResult = wordBoundary.test(wordBoundaryTestString);
+        const wordBoundaryResultClass = wordBoundaryResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Word Boundary:</strong>
+                <p>Biểu thức chính quy: <code>/\\bword\\b/</code></p>
+                <p>Chuỗi kiểm tra: <code>${wordBoundaryTestString}</code></p>
+                <p>Kết quả: <span class="${wordBoundaryResultClass}">${wordBoundaryResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với từ "word" tại ranh giới từ. Kết quả: ${wordBoundaryResult ? 'true' : 'false'} vì "word" là một từ độc lập.</p>
+            </div>
+        `;
+
+        const nonWordBoundary = /\Bword\B/;
+        const nonWordBoundaryTestString = 'wording is word.';
+        const nonWordBoundaryResult = nonWordBoundary.test(nonWordBoundaryTestString);
+        const nonWordBoundaryResultClass = nonWordBoundaryResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Non-Word Boundary:</strong>
+                <p>Biểu thức chính quy: <code>/\\Bword\\B/</code></p>
+                <p>Chuỗi kiểm tra: <code>${nonWordBoundaryTestString}</code></p>
+                <p>Kết quả: <span class="${nonWordBoundaryResultClass}">${nonWordBoundaryResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với "word" không phải tại ranh giới từ. Kết quả: ${nonWordBoundaryResult ? 'true' : 'false'} vì "word" trong "wording" không phải là một từ độc lập.</p>
+            </div>
+        `;
+
+        const charClass = /[abc]/;
+        const charClassTestString = 'banana';
+        const charClassResult = charClass.test(charClassTestString);
+        const charClassResultClass = charClassResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Character Class [abc]:</strong>
+                <p>Biểu thức chính quy: <code>/[abc]/</code></p>
+                <p>Chuỗi kiểm tra: <code>${charClassTestString}</code></p>
+                <p>Kết quả: <span class="${charClassResultClass}">${charClassResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ ký tự nào trong tập [a, b, c]. Kết quả: ${charClassResult ? 'true' : 'false'} vì "${charClassTestString}" chứa các ký tự này.</p>
+            </div>
+        `;
+
+        const negatedCharClass = /[^abc]/;
+        const negatedCharClassTestString = 'cherry';
+        const negatedCharClassResult = negatedCharClass.test(negatedCharClassTestString);
+        const negatedCharClassResultClass = negatedCharClassResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Negated Character Class [^abc]:</strong>
+                <p>Biểu thức chính quy: <code>/[^abc]/</code></p>
+                <p>Chuỗi kiểm tra: <code>${negatedCharClassTestString}</code></p>
+                <p>Kết quả: <span class="${negatedCharClassResultClass}">${negatedCharClassResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ ký tự nào không thuộc tập [a, b, c]. Kết quả: ${negatedCharClassResult ? 'true' : 'false'} vì "${negatedCharClassTestString}" chứa các ký tự không phải [a, b, c].</p>
+            </div>
+        `;
+
+        const range = /[a-z]/;
+        const rangeTestString = 'apple';
+        const rangeResult = range.test(rangeTestString);
+        const rangeResultClass = rangeResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Range [a-z]:</strong>
+                <p>Biểu thức chính quy: <code>/[a-z]/</code></p>
+                <p>Chuỗi kiểm tra: <code>${rangeTestString}</code></p>
+                <p>Kết quả: <span class="${rangeResultClass}">${rangeResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ ký tự nào từ a đến z. Kết quả: ${rangeResult ? 'true' : 'false'} vì "${rangeTestString}" chứa các ký tự trong khoảng này.</p>
+            </div>
+        `;
+
+        const digitRange = /[0-9]/;
+        const digitRangeTestString = 'abc123';
+        const digitRangeResult = digitRange.test(digitRangeTestString);
+        const digitRangeResultClass = digitRangeResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Digit Range [0-9]:</strong>
+                <p>Biểu thức chính quy: <code>/[0-9]/</code></p>
+                <p>Chuỗi kiểm tra: <code>${digitRangeTestString}</code></p>
+                <p>Kết quả: <span class="${digitRangeResultClass}">${digitRangeResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với bất kỳ chữ số nào từ 0 đến 9. Kết quả: ${digitRangeResult ? 'true' : 'false'} vì "${digitRangeTestString}" chứa các chữ số.</p>
+            </div>
+        `;
+
+        const zeroOrMore = /a*/;
+        const zeroOrMoreTestString = 'aaa';
+        const zeroOrMoreResult = zeroOrMore.test(zeroOrMoreTestString);
+        const zeroOrMoreResultClass = zeroOrMoreResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Zero or More *:</strong>
+                <p>Biểu thức chính quy: <code>/a*/</code></p>
+                <p>Chuỗi kiểm tra: <code>${zeroOrMoreTestString}</code></p>
+                <p>Kết quả: <span class="${zeroOrMoreResultClass}">${zeroOrMoreResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với 0 hoặc nhiều lần của ký tự "a". Kết quả: ${zeroOrMoreResult ? 'true' : 'false'} vì "${zeroOrMoreTestString}" chứa nhiều ký tự "a".</p>
+            </div>
+        `;
+
+        const oneOrMore = /a+/;
+        const oneOrMoreTestString = 'aaa';
+        const oneOrMoreResult = oneOrMore.test(oneOrMoreTestString);
+        const oneOrMoreResultClass = oneOrMoreResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>One or More +:</strong>
+                <p>Biểu thức chính quy: <code>/a+/</code></p>
+                <p>Chuỗi kiểm tra: <code>${oneOrMoreTestString}</code></p>
+                <p>Kết quả: <span class="${oneOrMoreResultClass}">${oneOrMoreResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với 1 hoặc nhiều lần của ký tự "a". Kết quả: ${oneOrMoreResult ? 'true' : 'false'} vì "${oneOrMoreTestString}" chứa nhiều ký tự "a".</p>
+            </div>
+        `;
+
+        const optional = /a?/;
+        const optionalTestString = 'aaa';
+        const optionalResult = optional.test(optionalTestString);
+        const optionalResultClass = optionalResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Optional ?:</strong>
+                <p>Biểu thức chính quy: <code>/a?/</code></p>
+                <p>Chuỗi kiểm tra: <code>${optionalTestString}</code></p>
+                <p>Kết quả: <span class="${optionalResultClass}">${optionalResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với 0 hoặc 1 lần của ký tự "a". Kết quả: ${optionalResult ? 'true' : 'false'} vì "${optionalTestString}" chứa nhiều ký tự "a".</p>
+            </div>
+        `;
+
+        const exactN = /a{3}/;
+        const exactNTestString = 'aaa';
+        const exactNResult = exactN.test(exactNTestString);
+        const exactNResultClass = exactNResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Exact n {3}:</strong>
+                <p>Biểu thức chính quy: <code>/a{3}/</code></p>
+                <p>Chuỗi kiểm tra: <code>${exactNTestString}</code></p>
+                <p>Kết quả: <span class="${exactNResultClass}">${exactNResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp chính xác 3 lần của ký tự "a". Kết quả: ${exactNResult ? 'true' : 'false'} vì "${exactNTestString}" chứa đúng 3 ký tự "a".</p>
+            </div>
+        `;
+
+        const rangeNtoM = /a{2,4}/;
+        const rangeNtoMTestString = 'aaa';
+        const rangeNtoMResult = rangeNtoM.test(rangeNtoMTestString);
+        const rangeNtoMResultClass = rangeNtoMResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Range n to m {2,4}:</strong>
+                <p>Biểu thức chính quy: <code>/a{2,4}/</code></p>
+                <p>Chuỗi kiểm tra: <code>${rangeNtoMTestString}</code></p>
+                <p>Kết quả: <span class="${rangeNtoMResultClass}">${rangeNtoMResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với từ 2 đến 4 lần của ký tự "a". Kết quả: ${rangeNtoMResult ? 'true' : 'false'} vì "${rangeNtoMTestString}" chứa 3 ký tự "a".</p>
+            </div>
+        `;
+
+        const startAnchor = /^a/;
+        const startAnchorTestString = 'apple';
+        const startAnchorResult = startAnchor.test(startAnchorTestString);
+        const startAnchorResultClass = startAnchorResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Start Anchor ^:</strong>
+                <p>Biểu thức chính quy: <code>/^a/</code></p>
+                <p>Chuỗi kiểm tra: <code>${startAnchorTestString}</code></p>
+                <p>Kết quả: <span class="${startAnchorResultClass}">${startAnchorResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp nếu ký tự "a" nằm ở đầu chuỗi. Kết quả: ${startAnchorResult ? 'true' : 'false'} vì "${startAnchorTestString}" bắt đầu bằng "a".</p>
+            </div>
+        `;
+
+        const endAnchor = /e$/;
+        const endAnchorTestString = 'apple';
+        const endAnchorResult = endAnchor.test(endAnchorTestString);
+        const endAnchorResultClass = endAnchorResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>End Anchor $:</strong>
+                <p>Biểu thức chính quy: <code>/e$/</code></p>
+                <p>Chuỗi kiểm tra: <code>${endAnchorTestString}</code></p>
+                <p>Kết quả: <span class="${endAnchorResultClass}">${endAnchorResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp nếu ký tự "e" nằm ở cuối chuỗi. Kết quả: ${endAnchorResult ? 'true' : 'false'} vì "${endAnchorTestString}" kết thúc bằng "e".</p>
+            </div>
+        `;
+
+        const group = /(a|b)c/;
+        const groupTestString = 'ac';
+        const groupResult = group.test(groupTestString);
+        const groupResultClass = groupResult ? 'true' : 'false';
+        resultsDiv.innerHTML += `
+            <div class="result">
+                <strong>Group (a|b)c:</strong>
+                <p>Biểu thức chính quy: <code>/(a|b)c/</code></p>
+                <p>Chuỗi kiểm tra: <code>${groupTestString}</code></p>
+                <p>Kết quả: <span class="${groupResultClass}">${groupResult ? 'Match' : 'No Match'}</span></p>
+                <p>Giải thích: Khớp với ký tự "a" hoặc "b" theo sau là "c". Kết quả: ${groupResult ? 'true' : 'false'} vì "${groupTestString}" khớp với mẫu này.</p>
+            </div>
+        `;
+
+       
+    </script>
+</body>
+</html>

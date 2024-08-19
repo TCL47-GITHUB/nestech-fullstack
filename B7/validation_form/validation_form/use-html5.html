@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation with Validity Object</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" minlength="5" required>
+        <div id="usernameError" class="error-message"></div>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div id="emailError" class="error-message"></div>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" required>
+        <div id="passwordError" class="error-message"></div>
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120" required>
+        <div id="ageError" class="error-message"></div>
+        <br><br>
+
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode" name="zipcode" pattern="\d{5}" required>
+        <div id="zipcodeError" class="error-message"></div>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll('.error-message').forEach(function(elem) {
+                elem.textContent = '';
+            });
+
+            // Check username
+            let username = document.getElementById('username');
+            if (username.validity.valueMissing) {
+                document.getElementById('usernameError').textContent = 'Username is required.';
+                isValid = false;
+            } else if (username.validity.tooShort) {
+                document.getElementById('usernameError').textContent = 'Username must be at least 5 characters long.';
+                isValid = false;
+            }
+
+            // Check email
+            let email = document.getElementById('email');
+            if (email.validity.valueMissing) {
+                document.getElementById('emailError').textContent = 'Email is required.';
+                isValid = false;
+            } else if (email.validity.typeMismatch) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Check password
+            let password = document.getElementById('password');
+            if (password.validity.valueMissing) {
+                document.getElementById('passwordError').textContent = 'Password is required.';
+                isValid = false;
+            } else if (password.validity.tooShort) {
+                document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long.';
+                isValid = false;
+            }
+
+            // Check age
+            let age = document.getElementById('age');
+            if (age.validity.valueMissing) {
+                document.getElementById('ageError').textContent = 'Age is required.';
+                isValid = false;
+            } else if (age.validity.rangeUnderflow) {
+                document.getElementById('ageError').textContent = 'Age must be at least 1.';
+                isValid = false;
+            } else if (age.validity.rangeOverflow) {
+                document.getElementById('ageError').textContent = 'Age must be no more than 120.';
+                isValid = false;
+            }
+
+            // Check zipcode
+            let zipcode = document.getElementById('zipcode');
+            if (zipcode.validity.valueMissing) {
+                document.getElementById('zipcodeError').textContent = 'Zip code is required.';
+                isValid = false;
+            } else if (zipcode.validity.patternMismatch) {
+                document.getElementById('zipcodeError').textContent = 'Zip code must be 5 digits.';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    </script>
+</body>
+</html>

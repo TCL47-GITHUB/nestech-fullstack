@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Validation Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <!-- Trường nhập liệu với lỗi tùy chỉnh -->
+        <label for="username">Username (min 5 characters):</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <!-- Trường nhập liệu email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Nút gửi biểu mẫu -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Lấy các trường nhập liệu
+        const usernameInput = document.getElementById('username');
+        const emailInput = document.getElementById('email');
+
+        // Thêm sự kiện kiểm tra nhập liệu cho trường username
+        usernameInput.addEventListener('input', function() {
+            if (usernameInput.value.length < 5) {
+                // Thiết lập thông báo lỗi tùy chỉnh
+                usernameInput.setCustomValidity('Username must be at least 5 characters long.');
+            } else {
+                // Xóa thông báo lỗi tùy chỉnh
+                usernameInput.setCustomValidity('');
+            }
+        });
+
+        // Xử lý sự kiện gửi biểu mẫu
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            if (!usernameInput.validity.valid || !emailInput.validity.valid) {
+                event.preventDefault(); // Ngăn gửi biểu mẫu nếu có lỗi
+                console.log('Form is invalid.');
+                if (usernameInput.validity.customError) {
+                    console.log('Custom error: ' + usernameInput.validationMessage);
+                }
+            } else {
+                console.log('Form is valid.');
+            }
+        });
+    </script>
+</body>
+</html>

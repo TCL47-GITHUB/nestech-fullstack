@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví Dụ Biểu Thức Chính Quy</title>
+</head>
+<body>
+    <h1>Ví Dụ Biểu Thức Chính Quy</h1>
+    
+    <div>
+        <h2>Kiểm Tra Email</h2>
+        <input type="text" id="emailInput" placeholder="Nhập email của bạn">
+        <button onclick="checkEmail()">Kiểm Tra Email</button>
+        <p id="emailResult"></p>
+    </div>
+
+    <div>
+        <h2>Xác Thực Số Điện Thoại</h2>
+        <input type="text" id="phoneInput" placeholder="Nhập số điện thoại của bạn">
+        <button onclick="validatePhone()">Xác Thực Số Điện Thoại</button>
+        <p id="phoneResult"></p>
+    </div>
+
+    <div>
+        <h2>Tìm và Thay Thế Văn Bản</h2>
+        <input type="text" id="textInput" placeholder="Nhập văn bản có chứa 'cat'">
+        <button onclick="findAndReplace()">Tìm và Thay Thế</button>
+        <p id="replaceResult"></p>
+    </div>
+
+    <div>
+        <h2>Xác Thực Ngày Tháng</h2>
+        <input type="text" id="dateInput" placeholder="Nhập ngày (DD/MM/YYYY)">
+        <button onclick="validateDate()">Xác Thực Ngày Tháng</button>
+        <p id="dateResult"></p>
+    </div>
+
+    <script>
+        // Hàm kiểm tra email
+        function checkEmail() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Biểu thức chính quy để kiểm tra email hợp lệ
+            const email = document.getElementById('emailInput').value;
+            const result = emailRegex.test(email) ? "Email hợp lệ." : "Email không hợp lệ."; // Kiểm tra và hiển thị kết quả
+            document.getElementById('emailResult').textContent = result;
+        }
+
+        // Hàm xác thực số điện thoại
+        function validatePhone() {
+            const phoneRegex = /^\d{10}$/; // Biểu thức chính quy để kiểm tra số điện thoại gồm 10 chữ số
+            const phoneNumber = document.getElementById('phoneInput').value;
+            const result = phoneRegex.test(phoneNumber) ? "Số điện thoại hợp lệ." : "Số điện thoại không hợp lệ."; // Kiểm tra và hiển thị kết quả
+            document.getElementById('phoneResult').textContent = result;
+        }
+
+        // Hàm tìm và thay thế văn bản
+        function findAndReplace() {
+            const text = document.getElementById('textInput').value;
+            const findCat = /cat/g; // Biểu thức chính quy để tìm tất cả các từ "cat"
+            const replacedText = text.replace(findCat, "dog"); // Thay thế tất cả "cat" bằng "dog"
+            document.getElementById('replaceResult').textContent = replacedText; // Hiển thị văn bản đã thay thế
+        }
+
+        // Hàm xác thực ngày tháng
+        function validateDate() {
+            const dateRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/; // Biểu thức chính quy để kiểm tra ngày tháng định dạng DD/MM/YYYY
+            const date = document.getElementById('dateInput').value;
+            const result = dateRegex.test(date) ? "Ngày tháng hợp lệ." : "Ngày tháng không hợp lệ."; // Kiểm tra và hiển thị kết quả
+            document.getElementById('dateResult').textContent = result;
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- Kiểm Tra Email
+
+Biểu Thức Chính Quy: ^[^\s@]+@[^\s@]+\.[^\s@]+$
+Giải Thích: Đảm bảo email có định dạng hợp lệ với ký tự trước và sau dấu @ và có dấu chấm . sau dấu @.
+Xác Thực Số Điện Thoại
+
+Biểu Thức Chính Quy: ^\d{10}$
+Giải Thích: Kiểm tra số điện thoại gồm đúng 10 chữ số.
+Tìm và Thay Thế Văn Bản
+
+Biểu Thức Chính Quy: cat
+Giải Thích: Tìm tất cả các từ "cat" và thay thế bằng "dog".
+Xác Thực Ngày Tháng
+
+Biểu Thức Chính Quy: ^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$
+Giải Thích: Kiểm tra ngày tháng theo định dạng DD/MM/YYYY. -->
+
+
+
+

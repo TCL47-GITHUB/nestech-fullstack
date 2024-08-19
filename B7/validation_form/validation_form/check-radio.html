@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox and Radio Button Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <fieldset>
+            <legend>Fruits</legend>
+            <label><input type="checkbox" name="fruit" value="Apple"> Apple</label>
+            <label><input type="checkbox" name="fruit" value="Banana"> Banana</label>
+            <label><input type="checkbox" name="fruit" value="Cherry"> Cherry</label>
+        </fieldset>
+        <fieldset>
+            <legend>Colors</legend>
+            <label><input type="radio" name="color" value="Red"> Red</label>
+            <label><input type="radio" name="color" value="Green"> Green</label>
+            <label><input type="radio" name="color" value="Blue"> Blue</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Name</legend>
+            <input type="text" name="color" value="Red">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Range</legend>
+            <input type="range" name="color" value="50" min="0" max="230">
+        </fieldset>
+        <br>
+        <button type="button" onclick="getFormValues()">Get Form Values</button>
+    </form>
+
+    <script>
+        function getFormValues() {
+            const checkboxes = document.querySelectorAll('input[name="fruit"]:checked');
+            const selectedFruits = [];
+            
+            for (let i = 0; i < checkboxes.length; i++) {
+                selectedFruits.push(checkboxes[i].value);
+            }
+
+            const radios = document.querySelectorAll('input[name="color"]');
+            // console.log("Radio-----------", radios[0].value);
+            let selectedColor = 'None';
+
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    selectedColor = radios[i].value;
+                    break;
+                }
+            }
+
+            console.log('Selected fruits:', selectedFruits);
+            console.log('Selected color:', selectedColor);
+        }
+    </script>
+</body>
+</html>

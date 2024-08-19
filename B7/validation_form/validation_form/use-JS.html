@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví Dụ Xác Thực Không Dùng Biểu Thức Chính Quy</title>
+</head>
+<body>
+    <h1>Ví Dụ Xác Thực Không Dùng Biểu Thức Chính Quy</h1>
+    
+    <div>
+        <h2>Kiểm Tra Email</h2>
+        <input type="text" id="emailInput" placeholder="Nhập email của bạn">
+        <button onclick="checkEmail()">Kiểm Tra Email</button>
+        <p id="emailResult"></p>
+    </div>
+
+    <div>
+        <h2>Xác Thực Số Điện Thoại</h2>
+        <input type="text" id="phoneInput" placeholder="Nhập số điện thoại của bạn">
+        <button onclick="validatePhone()">Xác Thực Số Điện Thoại</button>
+        <p id="phoneResult"></p>
+    </div>
+
+    <div>
+        <h2>Tìm và Thay Thế Văn Bản</h2>
+        <input type="text" id="textInput" placeholder="Nhập văn bản có chứa 'cat'">
+        <button onclick="findAndReplace()">Tìm và Thay Thế</button>
+        <p id="replaceResult"></p>
+    </div>
+
+    <div>
+        <h2>Xác Thực Ngày Tháng</h2>
+        <input type="text" id="dateInput" placeholder="Nhập ngày (DD/MM/YYYY)">
+        <button onclick="validateDate()">Xác Thực Ngày Tháng</button>
+        <p id="dateResult"></p>
+    </div>
+
+    <script>
+        // Hàm kiểm tra email
+        function checkEmail() {
+            const email = document.getElementById('emailInput').value;
+            const emailParts = email.split('@');
+            if (emailParts.length === 2) {
+                const localPart = emailParts[0];
+                const domainPart = emailParts[1];
+                const domainParts = domainPart.split('.');
+                if (localPart.length > 0 && domainParts.length === 2 && domainParts[0].length > 0 && domainParts[1].length > 0) {
+                    document.getElementById('emailResult').textContent = "Email hợp lệ.";
+                } else {
+                    document.getElementById('emailResult').textContent = "Email không hợp lệ.";
+                }
+            } else {
+                document.getElementById('emailResult').textContent = "Email không hợp lệ.";
+            }
+        }
+
+        // Hàm xác thực số điện thoại
+        function validatePhone() {
+            const phoneNumber = document.getElementById('phoneInput').value;
+            if (phoneNumber.length === 10 && !isNaN(phoneNumber)) {
+                document.getElementById('phoneResult').textContent = "Số điện thoại hợp lệ.";
+            } else {
+                document.getElementById('phoneResult').textContent = "Số điện thoại không hợp lệ.";
+            }
+        }
+
+        // Hàm tìm và thay thế văn bản
+        function findAndReplace() {
+            let text = document.getElementById('textInput').value;
+            while (text.includes('cat')) {
+                text = text.replace('cat', 'dog');
+            }
+            document.getElementById('replaceResult').textContent = text;
+        }
+
+        // Hàm xác thực ngày tháng
+        function validateDate() {
+            const date = document.getElementById('dateInput').value;
+            const dateParts = date.split('/');
+            if (dateParts.length === 3) {
+                const day = parseInt(dateParts[0], 10);
+                const month = parseInt(dateParts[1], 10);
+                const year = parseInt(dateParts[2], 10);
+                if (day >= 1 && day <= 31 && month >= 1 && month <= 12 && year > 0) {
+                    document.getElementById('dateResult').textContent = "Ngày tháng hợp lệ.";
+                } else {
+                    document.getElementById('dateResult').textContent = "Ngày tháng không hợp lệ.";
+                }
+            } else {
+                document.getElementById('dateResult').textContent = "Ngày tháng không hợp lệ.";
+            }
+        }
+    </script>
+</body>
+</html>

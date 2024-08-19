@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let regex = /^[A-Za-z0-9]{8,20}$/;
+
+console.log(regex.test("password123")); // true (mật khẩu hợp lệ)
+console.log(regex.test("pass")); // false (ít hơn 8 ký tự)
+console.log(regex.test("password1234567890123456")); // false (nhiều hơn 20 ký tự)
+
+    </script>
+</body>
+</html>
