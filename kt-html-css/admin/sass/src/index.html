@@ -32,8 +32,10 @@
           <include src="html/footer.html"></include>
         </footer>
       </div>
+
+      <!-- btn setting -->
       <div id="overlaySettings" class="overlay-settings">
-        <div class="left" onclick="hideSettings('overlaySettings')" ></div>
+        <div class="left" onclick="hideSettings('overlaySettings')"></div>
         <div class="settings-panel">
           <div class="settings-header">
             <div class="settings-header--top">
@@ -44,7 +46,9 @@
                 </div>
                 <p>Explore different styles according to your preferences</p>
               </div>
-              <div class="close" onclick="hideSettings('overlaySettings')"><i class="mm-1 icon1-times"></i></div>
+              <div class="close" onclick="hideSettings('overlaySettings')">
+                <i class="mm-1 icon1-times"></i>
+              </div>
             </div>
             <div class="reset-default">
               <a class="btn btn-secondary btn--center" href="#!">
@@ -160,7 +164,9 @@
             </div>
             <!--  Vertical Navbar Appearance -->
             <div class="setting-panel-item">
-              <h5 class="setting-panel-item-title">Vertical Navbar Appearance</h5>
+              <h5 class="setting-panel-item-title">
+                Vertical Navbar Appearance
+              </h5>
               <div class="nav-bar-group">
                 <div class="nav-bar--item">
                   <input
@@ -224,11 +230,10 @@
                 </div>
               </div>
             </div>
-       
-              <a href="#!" class="btn btn-primary btn--center">
-                Purchase template
-              </a>
 
+            <a href="#!" class="btn btn-primary btn--center">
+              Purchase template
+            </a>
           </div>
         </div>
       </div>
@@ -237,11 +242,51 @@
         <i class="mm-1 icon1-solid-settings"></i>
         <small class="settings-label">Customize</small>
       </div>
-      <button class="btn-support-chat">
-        <i class="mm-1 icon1-headphone-1"></i>
-        <span>Chat demo</span><i class="mm-1 icon1-circle-fill"></i>
-      </button>
+
+      <!-- btn chat -->
+       <div class="support-chat-container">
+        <div class="support-chat">
+          <div class="card">
+            <div class="card-header">
+              <div class="title">
+                <h5>Demo widget</h5>
+                <i class="mm-1 icon1-circle-fill"></i>
+              </div>
+              <i class="mm-1 icon1-more-h"></i>
+            </div>
+          </div>
+        </div>
+        <button onclick="btnChat()" class="btn-support-chat">
+          <i class="mm-1 icon1-chevron-down"></i>
+          <i class="mm-1 icon1-headphone-1"></i>
+          <span>Chat demo</span>
+          <i class="mm-1 icon1-circle-fill"></i>
+        </button>
+       </div>
     </main>
+
+
+    <script>
+      function btnChat() {
+        let btn = document.getElementsByClassName("btn-support-chat")[0];
+        btn.style.padding = '13px';
+        let children = btn.children;
+         // Kiểm tra trạng thái hiển thị của phần tử đầu tiên
+         if (children[0].style.display === 'block') {
+            // Nếu phần tử đầu tiên đang hiển thị, ẩn nó đi và hiển thị các phần tử khác
+            children[0].style.display = 'none';
+            children[1].style.display = 'none';
+            children[2].style.display = 'block';
+            children[3].style.display = 'block';
+        } else {
+            // Nếu phần tử đầu tiên đang ẩn, hiển thị nó và ẩn các phần tử khác
+            children[0].style.display = 'block';
+            children[1].style.display = 'none';
+            children[2].style.display = 'none';
+            children[3].style.display = 'none';
+        }
+      }
+    </script>
 
     <script src="js/include-html.js"></script>
     <script src="js/main-component.js"></script>
