@@ -4,16 +4,20 @@
 @import 'main';
 @import 'footer';
 @import 'variables';
+
 * {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background: $body-bg;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -32,23 +36,24 @@ a{
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.btn--center{
+.btn--center {
     justify-content: center;
     align-items: center;
 }
 
-.btn-primary{
+.btn-primary {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: $btn-secondary-bg;
     color: $text-primary-color;
     border-radius: $radius-default;
@@ -56,46 +61,60 @@ a{
     display: flex;
     gap: 0.5rem;
 }
-.btn-secondary:hover{
+
+.btn-secondary:hover {
     background-color: $link-hover;
 }
 
-summary::marker{
+summary::marker {
     display: none;
-  }
+}
 
-  summary {
+summary {
     cursor: pointer;
-    list-style: none; /* Loại bỏ dấu bullet mặc định */
+    list-style: none;
+    /* Loại bỏ dấu bullet mặc định */
     display: flex;
     align-items: center;
 }
 
 summary::marker {
-    display: none; /* Ẩn marker mặc định */
+    display: none;
+    /* Ẩn marker mặc định */
 }
 
 summary::before {
-    content: '\a10d'; /* Icon caret-right */
+    content: '\a10d';
+    /* Icon caret-right */
     font-family: 'font-icon-set1-mm' !important;
     font-weight: 900;
     margin-right: 4px;
     font-size: 0.625em;
-    transition: transform 300ms ease; /* Thêm hiệu ứng chuyển đổi */
+    transition: transform 300ms ease;
+    /* Thêm hiệu ứng chuyển đổi */
 }
 
-details[open] > summary::before {
-    transform: rotate(90deg); /* Xoay biểu tượng 180 độ khi mở */
+details[open]>summary::before {
+    transform: rotate(90deg);
+    /* Xoay biểu tượng 180 độ khi mở */
 }
 
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: 1.25rem;
 }
 
-table{
+table {
     caption-side: bottom;
     border-collapse: collapse;
+}
+
+%input-styles {
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
 }
 
 ::-webkit-scrollbar {
