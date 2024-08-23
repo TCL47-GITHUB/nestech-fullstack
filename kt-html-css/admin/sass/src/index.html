@@ -251,7 +251,16 @@
                 <h5>Demo widget</h5>
                 <i class="mm-1 icon1-circle-fill"></i>
               </div>
-              <i class="mm-1 icon1-more-h"></i>
+              <div class="more">
+                <i class="mm-1 icon1-more-h" onclick="toggleShowHideByID(event, 'moreDetails', 'flex')"></i>
+                <div class="more-details" id="moreDetails">
+                  <a href="#!" class="more-details--item">Request a callback</a>
+                  <a href="#!" class="more-details--item">Search in chat</a>
+                  <a href="#!" class="more-details--item">Show history</a>
+                  <a href="#!" class="more-details--item">Report to Admin</a>
+                  <a href="#!" class="more-details--item">Close Support</a>
+                </div>
+              </div>
             </div>
             <div class="card-body">
               <div class="card-body-chat">
@@ -298,30 +307,6 @@
         </button>
        </div>
     </main>
-
-
-    <script>
-      function btnChat() {
-        let btn = document.getElementsByClassName("btn-support-chat")[0];
-        btn.style.padding = '13px';
-        let children = btn.children;
-         // Kiểm tra trạng thái hiển thị của phần tử đầu tiên
-         if (children[0].style.display === 'block') {
-            // Nếu phần tử đầu tiên đang hiển thị, ẩn nó đi và hiển thị các phần tử khác
-            children[0].style.display = 'none';
-            children[1].style.display = 'none';
-            children[2].style.display = 'block';
-            children[3].style.display = 'block';
-        } else {
-            // Nếu phần tử đầu tiên đang ẩn, hiển thị nó và ẩn các phần tử khác
-            children[0].style.display = 'block';
-            children[1].style.display = 'none';
-            children[2].style.display = 'none';
-            children[3].style.display = 'none';
-        }
-      }
-    </script>
-
     <script src="js/include-html.js"></script>
     <script src="js/main-component.js"></script>
     <script src="js/header-component.js"></script>
