@@ -9,3 +9,88 @@ input:focus{
 select:focus-visible {
     outline: none;
 }
+
+.btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-gray-100 px-3.5 py-2 rounded-md h-fit;
+}
+
+.btn-light {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-800 px-3.5 py-2 rounded-md h-fit;
+}
+
+.title{
+    @apply font-semibold text-gray-800 text-xl py-3;
+}
+.sub-title{
+    @apply font-semibold text-gray-600 text-lg py-3;
+}
+
+.table{
+    @apply mb-4;
+    & > thead{
+        @apply h-8;
+    }
+}
+
+.table-striped{
+    & > thead{
+        & > tr{
+            @apply border-b border-gray-300;
+            & > th{
+                @apply px-2;
+            }
+        }
+    }
+    & > tbody > tr{
+        @apply border-b border-gray-300 bg-white even:bg-gray-100 hover:invert-[.1];
+        & > td, th {
+            @apply px-2 py-4;
+        }
+    }
+}
+
+.table-dark{
+    & > thead{
+        @apply  bg-gray-800 text-gray-200;
+        & > tr{
+            @apply border-b border-gray-200;
+            & > th{
+                @apply px-2;
+            }
+        }
+    }
+    & > tbody > tr{
+        @apply border-b border-gray-200 text-gray-200 bg-gray-800 even:bg-gray-700 hover:invert-[.1];
+        & > td, th {
+            @apply px-2 py-4;
+        }
+    }
+}
+
+.table-success{
+    & > thead{
+        @apply  bg-[#d3efcd];
+        & > tr{
+            @apply border-b border-gray-300;
+            & > th{
+                @apply px-2;
+            }
+        }
+    }
+    & > tbody > tr{
+        @apply border-b border-gray-300 bg-[#d3efcd] even:bg-[#c8e3c3] hover:invert-[.1];
+        & > td, th {
+            @apply px-2 py-4;
+        }
+    }
+}
+
+
+@keyframes ring-icon1-circle-fill {
+    75%,
+    100% {
+      -webkit-transform: scale(2.5);
+      transform: scale(2.5);
+      opacity: 0
+    }
+}

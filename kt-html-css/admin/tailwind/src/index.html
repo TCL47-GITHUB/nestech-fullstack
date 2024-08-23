@@ -1,126 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/output.css">
-    <link rel="stylesheet" href="assets/fonts/style.css">
-</head>
-<body>
-    <main class="bg-[#f5f7fa] flex  mt-16">
-        <!-- header -->
-        <header class="border-b border-gray-300 text-gray-500 fixed top-0 left-0 z-50 bg-white w-full">
-            <nav class="mx-6 h-16 flex items-center">
-                <div class="flex items-center gap-4 justify-between w-full">
-                    <a href="#!" class="flex gap-2 items-center">
-                        <img src="assets/img/logo.png" alt="logo" class="w-7 aspect-square">
-                        <h5 class="font-semibold text-xl">phoenix</h5>
-                    </a>
-
-                    <div class="border rounded-full border-gray-300 px-3 py-2 text-gray-400 gap-2 w-full max-w-[450px] text-xs">
-                        <i class="mm-1 icon1-search"></i>
-                        <input type="text" placeholder="Search..." class="focus:outline-none">
-                    </div>
-
-                    <ul class="flex items-center gap-4 text-xl">
-                        <li>
-                            <div class="w-8 aspect-square bg-orange-100 text-orange-400 flex items-center justify-center rounded-full cursor-pointer hover:bg-orange-400 hover:text-gray-100"><i class="mm-1 icon1-instagram"></i></div>
-                        </li>
-                        <li>
-                            <div class="cursor-pointer"><i class="mm-1 icon1-bell"></i></div>
-                        </li>
-                        <li>
-                            <div class="cursor-pointer"><i class="mm-1 icon1-grid"></i></div>
-                        </li>
-                        <li>
-                            <a href="#!" class="cursor-pointer"><img class="w-9 aspect-square rounded-full" src="assets/img/avatar-1.png" alt="avatar"></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- sidebar -->
-        <aside class="w-[254px] h-screen bg-black">
-            <nav>
-
-            </nav>
-        </aside>
-        <!-- main -->
-        <div class="w-full p-8">
-            <div class="flex justify-between gap-6">
-                <!-- left -->
-                <div class="flex w-full">
-                    <div class="card w-full bg-white">
-                        <!-- card header -->
-                        <div class="flex justify-between w-full px-6 py-6 border border-gray-200 rounded-t-lg bg-[#f5f7fa] sticky top-16">
-                            <h4 class="font-semibold text-gray-500 text-xl">Basic Forms</h4>
-                            <div class="flex gap-4">
-                                <button><i class="mm-1 icon1-copy"></i> <span>Copy code</span></button>
-                                <button><i class="mm-1 icon1-eye"></i> <span>View code</span></button>
-                            </div>
-                        </div>
-                        <!-- card body -->
-                         <div>
-                            <form action="" class="p-6">
-                                <div class="mb-4">
-                                    <label for="basicFormName" class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold">Name</label>
-                                    <input id="basicFormName" type="text" placeholder="Name" class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold">
-                                </div>
-                                <div  class="mb-4">
-                                    <label for="basicFormEmail" class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold">Email address</label>
-                                    <input id="basicFormEmail" type="email" placeholder="name@example.com" class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold">
-                                </div>
-                                <div  class="mb-4">
-                                    <label for="basicFormPassword" class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold">Password</label>
-                                    <input id="basicFormPassword" type="password" placeholder="Password" class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold">
-                                </div>
-                                <div  class="mb-4">
-                                    <label for="basicFormDate" class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold">Date of Birth</label>
-                                    <input id="basicFormDate" type="date" placeholder="Default select example" class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold">
-                                </div>
-                                <div  class="mb-4">
-                                    <label for="basicFormGender" class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold">Gender</label>
-                                   
-                                    <select name="" id="basicFormGender" class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold">  
-                                            <option selected="selected">Select your gender</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                            <option value="other">Other</option>
-                             
-                                    </select>
-
-                                    </select>
-                                </div>
-                                <div  class="mb-4">
-                                    <label for="basicFormFile" class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold">Upload image</label>
-                                    <input id="basicFormFile" type="file"  class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold">
-                                </div>
-                                <div  class="mb-4">
-                                    <label for="basicFormTextarea" class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold">Description</label>
-                                    <textarea id="basicFormTextarea" rows="3" placeholder="Description"  class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold"></textarea>
-                                </div>
-                            </form>
-                         </div>
-                    </div>
-
-                </div>
-                <!-- right -->
-                <div class="w-2/12">
-                    <div class="flex flex-col gap-4 sticky top-20">
-                        <h5 class="font-semibold">On this page</h5>
-                        <ul class="text-gray-500 border-t border-gray-300 pt-2">
-                            <li><a href="#!" class="px-2 py-1 block rounded hover:bg-gray-200">Charts</a></li>
-                            <li><a href="#!" class="px-2 py-1 block rounded hover:bg-gray-200">Basic Form</a></li>
-                            <li><a href="#!" class="px-2 py-1 block rounded hover:bg-gray-200">Accented tables</a></li>
-                            <li><a href="#!" class="px-2 py-1 block rounded hover:bg-gray-200">Horizontal form label sizing</a></li>
-                        </ul>
-                    </div>
-                </div>
-               
+    <link rel="stylesheet" href="styles/output.css" />
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+  </head>
+  <body>
+    <main class="bg-[#f5f7fa] flex mt-16">
+      <!-- header -->
+      <header
+        class="border-b border-gray-300 text-gray-500 fixed top-0 left-0 z-50 bg-white w-full"
+      >
+        <nav class="mx-6 h-16 flex items-center">
+          <div class="flex items-center gap-4 justify-between w-full">
+            <div class="flex gap-2 items-center">
+                <i class="mm-1 icon1-menu-2 text-lg sm:hidden"></i>
+                <a href="#!" class="flex gap-2 items-center">
+                  <img
+                    src="assets/img/logo.png"
+                    alt="logo"
+                    class="w-7 max-w-7 aspect-square"
+                  />
+                  <h5 class="font-semibold text-xl">phoenix</h5>
+                </a>
             </div>
-           
+
+            <div
+              class="hidden sm:block border rounded-full border-gray-300 px-3 py-2 text-gray-400 gap-2 w-full max-w-[450px] text-xs"
+            >
+              <i class="mm-1 icon1-search"></i>
+              <input
+                type="text"
+                placeholder="Search..."
+                class="focus:outline-none"
+              />
+            </div>
+
+            <ul class="flex items-center gap-4 text-xl">
+              <li>
+                <div
+                  class="w-8 aspect-square bg-orange-100 text-orange-400 flex items-center justify-center rounded-full cursor-pointer hover:bg-orange-400 hover:text-gray-100"
+                >
+                  <i class="mm-1 icon1-instagram"></i>
+                </div>
+              </li>
+              <li>
+                <div class="cursor-pointer">
+                  <i class="mm-1 icon1-bell"></i>
+                </div>
+              </li>
+              <li>
+                <div class="cursor-pointer">
+                  <i class="mm-1 icon1-grid"></i>
+                </div>
+              </li>
+              <li>
+                <a href="#!" class="cursor-pointer"
+                  ><img
+                    class="w-9 aspect-square max-w-9 rounded-full"
+                    src="assets/img/avatar-1.png"
+                    alt="avatar"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- sidebar -->
+      <aside class="w-[254px] h-screen bg-black hidden md:block">
+        <nav></nav>
+      </aside>
+      <!-- main -->
+      <div class="w-full">
+        <div class="flex flex-col-reverse xl:flex-row justify-between gap-6 p-4 sm:gap-6 sm:p-8">
+          <!-- left -->
+          <div class="flex flex-col gap-6 w-full">
+            <!-- Basic form -->
+            <div class="card w-full bg-white border border-gray-300 rounded-lg">
+              <!-- card header -->
+              <div
+                class="flex justify-between w-full px-6 py-6 border-b border-gray-300 rounded-t-lg bg-[#f5f7fa] sticky top-[60px]"
+              >
+                <h3 class="title font-semibold text-gray-500 text-xl">
+                  Basic Forms
+                </h3>
+                <div class="flex gap-4 items-center">
+                  <button>
+                    <i class="mm-1 icon1-copy"></i> <span>Copy code</span>
+                  </button>
+                  <button class="btn-light border border-gray-300">
+                    <i class="mm-1 icon1-eye"></i> <span>View code</span>
+                  </button>
+                </div>
+              </div>
+              <!-- card body -->
+              <div>
+                <form action="" class="p-6">
+                  <div class="mb-4">
+                    <label
+                      for="basicFormName"
+                      class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold"
+                      >Name</label
+                    >
+                    <input
+                      id="basicFormName"
+                      type="text"
+                      placeholder="Name"
+                      class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      for="basicFormEmail"
+                      class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold"
+                      >Email address</label
+                    >
+                    <input
+                      id="basicFormEmail"
+                      type="email"
+                      placeholder="name@example.com"
+                      class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      for="basicFormPassword"
+                      class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold"
+                      >Password</label
+                    >
+                    <input
+                      id="basicFormPassword"
+                      type="password"
+                      placeholder="Password"
+                      class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      for="basicFormDate"
+                      class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold"
+                      >Date of Birth</label
+                    >
+                    <input
+                      id="basicFormDate"
+                      type="date"
+                      placeholder="Default select example"
+                      class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      for="basicFormGender"
+                      class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold"
+                      >Gender</label
+                    >
+
+                    <select
+                      name=""
+                      id="basicFormGender"
+                      class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold"
+                    >
+                      <option selected="selected">Select your gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      for="basicFormFile"
+                      class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold"
+                      >Upload image</label
+                    >
+                    <input
+                      id="basicFormFile"
+                      type="file"
+                      class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      for="basicFormTextarea"
+                      class="block pl-4 uppercase mb-1 text-[0.64rem] font-semibold"
+                      >Description</label
+                    >
+                    <textarea
+                      id="basicFormTextarea"
+                      rows="3"
+                      placeholder="Description"
+                      class="border border-gray-200 px-4 py-2 rounded w-full text-[0.8rem] font-semibold"
+                    ></textarea>
+                  </div>
+                  <div class="mb-4 flex items-center gap-2 text-gray-500">
+                    <input
+                      id="basicFormCheckbox"
+                      type="checkbox"
+                      class="border border-gray-200 px-4 py-2 rounded text-[0.8rem] font-semibold"
+                    />
+                    <label for="basicFormCheckbox" class="text-md"
+                      >Remember me</label
+                    >
+                  </div>
+                  <button class="btn-primary" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Tables -->
+            <div class="card w-full bg-white border border-gray-300 rounded-lg">
+              <!-- card header -->
+              <div
+                class="flex justify-between w-full px-6 py-6 border-b border-gray-300 rounded-t-lg bg-[#f5f7fa] sticky top-[60px]"
+              >
+                <h3 class="title font-semibold text-gray-500 text-xl">
+                  Accented tables
+                </h3>
+                <div class="flex gap-4 items-center">
+                  <button class="">
+                    <i class="mm-1 icon1-copy"></i> <span>Copy code</span>
+                  </button>
+                  <button class="btn-light border border-gray-300">
+                    <i class="mm-1 icon1-eye"></i> <span>View code</span>
+                  </button>
+                </div>
+              </div>
+              <!-- card body -->
+              <div>
+                <div class="px-6">
+                  <h4 class="sub-title">Table Striped</h4>
+                  <table class="table table-striped w-full text-left">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First</th>
+                        <th>Last</th>
+                        <th>Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="px-6">
+                  <h4 class="sub-title">Table Dark</h4>
+                  <table class="table table-dark w-full text-left">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First</th>
+                        <th>Last</th>
+                        <th>Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="px-6">
+                  <h4 class="sub-title">Table Success</h4>
+                  <table class="table table-success w-full text-left">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>First</th>
+                        <th>Last</th>
+                        <th>Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class=" w-full xl:w-2/12">
+            <div class="flex flex-col gap-4 sticky top-20">
+              <h5 class="font-semibold ">On this page</h5>
+              <ul class="text-gray-500 border-t border-gray-300 pt-2">
+                <li>
+                  <a href="#!" class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
+                    >Charts</a
+                  >
+                </li>
+                <li>
+                  <a href="#!" class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
+                    >Basic Form</a
+                  >
+                </li>
+                <li>
+                  <a href="#!" class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
+                    >Accented tables</a
+                  >
+                </li>
+                <li>
+                  <a href="#!" class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
+                    >Horizontal form label sizing</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <footer class="flex justify-between items-center px-6 h-16 border-t border-gray-300">
+            <p>
+              Thank you for creating with Phoenix <span>|</span> 2024 ©
+              <a href="#!">Themewagon</a>
+            </p>
+            <p>
+              v1.18.0
+            </p>
+          </footer>
+      </div>
+      <div>
+        <button  class="bg-white rounded-full p-4 sm:px-6 transition-all duration-300 shadow-md border border-gray-300 flex items-center gap-2 fixed bottom-20 right-12">
+            <i class="mm-1 icon1-chevron-down hidden" ></i>
+            <i class="mm-1 icon1-headphone-1 text-blue-600 sm:hidden"></i>
+            <span class="font-semibold text-blue-600 hidden sm:block">Chat demo</span>
+            <div class="absolute -top-1 left-0 sm:static">
+                <div class="mm-1 icon1-circle-fill text-green-700 relative">
+                    <i class="mm-1 icon1-circle-fill text-green-700 text-opacity-65 -z-10 absolute top-0 left-0 ring-icon1-circle-fill"></i>
+                </div>
+                
+            </div>
+          </button>
+      </div>
     </main>
-</body>
+    <script>
+      function toggleDropdown() {
+        const dropdown = document.getElementById("dropdown");
+        dropdown.classList.toggle("hidden");
+      }
+    </script>
+  </body>
 </html>
