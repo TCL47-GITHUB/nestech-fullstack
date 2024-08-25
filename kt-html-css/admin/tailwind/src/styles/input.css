@@ -85,12 +85,23 @@ select:focus-visible {
     }
 }
 
+.no-scrollbar{
+    scrollbar-width: none;
+}
 
-@keyframes ring-icon1-circle-fill {
-    75%,
-    100% {
-      -webkit-transform: scale(2.5);
-      transform: scale(2.5);
-      opacity: 0
-    }
+.hover\:no-scrollbar:hover{
+    scrollbar-width: unset;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }

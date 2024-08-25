@@ -16,15 +16,15 @@
         <nav class="mx-6 h-16 flex items-center">
           <div class="flex items-center gap-4 justify-between w-full">
             <div class="flex gap-2 items-center">
-                <i class="mm-1 icon1-menu-2 text-lg sm:hidden"></i>
-                <a href="#!" class="flex gap-2 items-center">
-                  <img
-                    src="assets/img/logo.png"
-                    alt="logo"
-                    class="w-7 max-w-7 aspect-square"
-                  />
-                  <h5 class="font-semibold text-xl">phoenix</h5>
-                </a>
+              <i class="mm-1 icon1-menu-2 text-lg sm:hidden"></i>
+              <a href="#!" class="flex gap-2 items-center">
+                <img
+                  src="assets/img/logo.png"
+                  alt="logo"
+                  class="w-7 max-w-7 aspect-square"
+                />
+                <h5 class="font-semibold text-xl">phoenix</h5>
+              </a>
             </div>
 
             <div
@@ -69,24 +69,1488 @@
         </nav>
       </header>
       <!-- sidebar -->
-      <aside class="w-[254px] h-screen bg-black hidden md:block">
-        <nav></nav>
+      <aside class="hidden md:block">
+        <nav
+          class="no-scrollbar hover:no-scrollbar p-4 w-[254px] bg-white border-r border-gray-300 h-[calc(100vh-8rem)] sticky top-16 overflow-auto text-gray-600 text-sm [&_.nav-item_.nav-link]:pl-6 [&_.nav-item_.nav-link]:py-2 [&_.nav-item_.nav-item_.nav-link]:pr-2 [&_.nav-item_.nav-item_.nav-link]:pl-14 [&_.nav-item_.nav-item_.nav-link:hover]:bg-gray-100 [&_.nav-item_.label]:mt-6 [&_.nav-item_.label]:mb-2 [&_.nav-item_.label]:px-3 [&_.nav-item_.nav-item_.nav-item_.nav-link]:pl-20 [&_.nav-link]:relative [&_.icon1-caret-right]:absolute [&_.nav-item_.nav-link_.icon1-caret-right]:left-2 [&_.nav-item_.nav-item_.nav-link_.icon1-caret-right]:left-10"
+        >
+          <ul>
+            <!-- Home -->
+            <li class="nav-item">
+              <div
+                onclick="toggleDropdown(this)"
+                class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+              >
+                <i class="mm-1 icon1-caret-right text-[10px] rotate-90"></i>
+                <div class="flex items-center gap-2">
+                  <i class="mm-1 icon1-cd text-xl"></i>
+                  <p>Home</p>
+                </div>
+              </div>
+              <div class="parent-wrapper">
+                <ul>
+                  <li class="nav-item">
+                    <a class="nav-link block rounded-md" href="#!"
+                      >E commerce</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link block rounded-md" href="#!"
+                      >Project management</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link block rounded-md" href="#!">CRM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link block rounded-md" href="#!"
+                      >Travel agency
+                      <span
+                        class="rounded border border-orange-300 text-orange-500 bg-orange-100 px-1.5 py-0 ml-1"
+                        >New</span
+                      ></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- APPS  -->
+            <li class="nav-item">
+              <div class="nav-item-wrapper">
+                <p class="label">APPS</p>
+                <!-- E commerce -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-shopping-cart-2 text-xl"></i>
+                      <p>E commerce</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>Admin</p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Add products</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Products</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Customers</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Customers Details</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>Customers</p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Homepage</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products details</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products filter</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Cart</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Checkout</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Shipping info</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Profile</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Favourite stores</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Wishlist</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Order tracking</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Invoice</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Project management</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">CRM</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- CRM -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-phone text-xl"></i>
+                      <p>CRM</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Analytics</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Deals</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Deal details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Lead</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Lead details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Report</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Report details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Add contact</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Project management -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-clipboard-list-check text-xl"></i>
+                      <p>Project management</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Ceate new</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project list view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project cart view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project board view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Todo list</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project details</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Travel agency -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-shopping-cart-2 text-xl"></i>
+                      <p>Travel agency</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Landing</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>Hotel</p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Add products</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Products</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Customers</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Customers Details</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>
+                            Flight
+                            <span
+                              class="rounded border border-orange-300 text-orange-500 bg-orange-100 px-1.5 py-0 ml-1"
+                              >New</span
+                            >
+                          </p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Homepage</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products details</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products filter</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Cart</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Checkout</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Shipping info</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Profile</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Favourite stores</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Wishlist</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Order tracking</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Invoice</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>
+                            Trip
+                            <span
+                              class="rounded border border-orange-300 text-orange-500 bg-orange-100 px-1.5 py-0 ml-1"
+                              >New</span
+                            >
+                          </p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Trip</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products details</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products filter</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Cart</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Checkout</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Shipping info</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Profile</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Favourite stores</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Wishlist</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Order tracking</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Invoice</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Chat -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <!-- <i class="mm-1 icon1-caret-right text-[10px]"></i> -->
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-comment-chat text-xl"></i>
+                      <p>Chat</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Email -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-mail text-xl"></i>
+                      <p>Email</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">Inbox</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Email detail</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Compose</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Events -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-bookmark text-xl"></i>
+                      <p>Events</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">Inbox</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Email detail</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Compose</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Kanban -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-award text-xl"></i>
+                      <p>Kanban</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Create board</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Kanban</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Boards</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Social -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-social text-xl"></i>
+                      <p>Social</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Profile</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Settings</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Boards</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Calendar -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <!-- <i class="mm-1 icon1-caret-right text-[10px]"></i> -->
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-calendar text-xl"></i>
+                      <p>Calendar</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Pages  -->
+            <li class="nav-item">
+              <div class="nav-item-wrapper">
+                <p class="label">PAGES</p>
+                <!-- Stater -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <!-- <i class="mm-1 icon1-caret-right text-[10px]"></i> -->
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-direction text-xl"></i>
+                      <p>Stater</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Faq -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-help-circle text-xl"></i>
+                      <p>Faq</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>Admin</p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Add products</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Products</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Customers</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Customers Details</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>Customers</p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Homepage</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products details</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products filter</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Cart</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Checkout</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Shipping info</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Profile</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Favourite stores</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Wishlist</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Order tracking</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Invoice</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Project management</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">CRM</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Landing -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-location text-xl"></i>
+                      <p>Landing</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Analytics</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Deals</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Deal details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Lead</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Lead details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Report</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Report details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Add contact</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Pricing -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-tag-1 text-xl"></i>
+                      <p>Pricing</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Ceate new</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project list view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project cart view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project board view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Todo list</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project details</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Notification -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-bell text-xl"></i>
+                      <p>Notification</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Members -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-user-2 text-xl"></i>
+                      <p>Members</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Timeline -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-clock text-xl"></i>
+                      <p>Timeline</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Errors -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-alert-triangle text-xl"></i>
+                      <p>Errors</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">Inbox</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Email detail</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Compose</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Authentication -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-locked text-xl"></i>
+                      <p>Authentication</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Create board</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Kanban</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Boards</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Layouts -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-analysis-1 text-xl"></i>
+                      <p>Layouts</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Profile</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Settings</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Boards</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Modules  -->
+            <li class="nav-item">
+              <div class="nav-item-wrapper">
+                <p class="label">MODULES</p>
+               
+                <!-- Forms -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-file-text-o text-xl"></i>
+                      <p>Forms</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>Admin</p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Add products</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Products</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Customers</a
+                              >
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!"
+                                >Customers Details</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div
+                          onclick="toggleDropdown(this)"
+                          class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                        >
+                          <i
+                            class="mm-1 icon1-caret-right text-[10px] mr-1"
+                          ></i>
+                          <p>Customers</p>
+                        </div>
+                        <div class="parent-wrapper hidden">
+                          <ul>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Homepage</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products details</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Products filter</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Cart</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Checkout</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Shipping info</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Profile</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Favourite stores</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Wishlist</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Order tracking</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link block rounded-md" href="#!">
+                                <span>Invoice</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Project management</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">CRM</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Icons -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-grid text-xl"></i>
+                      <p>Icons</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Analytics</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Deals</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Deal details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Lead</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Lead details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Report</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Report details</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Add contact</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Tables -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-tablet text-xl"></i>
+                      <p>Tables</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Ceate new</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project list view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project cart view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project board view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Todo list</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project details</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+               <!-- Echarts -->
+               <div>
+                <div
+                  onclick="toggleDropdown(this)"
+                  class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                >
+                  <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                  <div class="flex items-center gap-2">
+                    <i class="mm-1 icon1-analytic text-xl"></i>
+                    <p>Echarts</p>
+                  </div>
+                </div>
+                <div class="parent-wrapper hidden">
+                  <ul>
+                    <li class="nav-item">
+                      <a class="nav-link block rounded-md" href="#!">
+                        <span>Ceate new</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link block rounded-md" href="#!">
+                        <span>Project list view</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link block rounded-md" href="#!">
+                        <span>Project cart view</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link block rounded-md" href="#!">
+                        <span>Project board view</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link block rounded-md" href="#!">
+                        <span>Todo list</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link block rounded-md" href="#!">
+                        <span>Project details</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                <!-- Components -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-box text-xl"></i>
+                      <p>Components</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Ceate new</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project list view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project cart view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project board view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Todo list</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project details</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Utilities -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-settings text-xl"></i>
+                      <p>Utilities</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Ceate new</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project list view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project cart view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project board view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Todo list</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project details</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Shelf -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <!-- <i class="mm-1 icon1-caret-right text-[10px]"></i> -->
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-clock text-xl"></i>
+                      <p>Shelf</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Multi level -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-page-stacked-scrolling text-xl"></i>
+                      <p>Multi level</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Profile</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Settings</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!"
+                          >Boards</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div
+            class="fixed bottom-0 left-0 flex items-center px-4 w-[254px] h-16 border-t border-r border-gray-300 bg-white"
+          >
+            <div class="flex items-center gap-1.5">
+              <i class="mm-1 icon1-log-out"></i>
+              <span>Collapsed View</span>
+            </div>
+          </div>
+        </nav>
       </aside>
       <!-- main -->
       <div class="w-full">
-        <div class="flex flex-col-reverse xl:flex-row justify-between gap-6 p-4 sm:gap-6 sm:p-8">
+        <div
+          class="flex flex-col-reverse xl:flex-row justify-between gap-6 p-4 sm:gap-6 sm:p-8"
+        >
           <!-- left -->
           <div class="flex flex-col gap-6 w-full">
             <!-- Basic form -->
             <div class="card w-full bg-white border border-gray-300 rounded-lg">
               <!-- card header -->
               <div
-                class="flex justify-between w-full px-6 py-6 border-b border-gray-300 rounded-t-lg bg-[#f5f7fa] sticky top-[60px]"
+                class="flex flex-col sm:flex-row justify-between w-full px-6 py-6 border-b border-gray-300 rounded-t-lg bg-[#f5f7fa] sticky top-[60px]"
               >
                 <h3 class="title font-semibold text-gray-500 text-xl">
                   Basic Forms
                 </h3>
-                <div class="flex gap-4 items-center">
+                <div class="flex gap-4 items-center justify-end">
                   <button>
                     <i class="mm-1 icon1-copy"></i> <span>Copy code</span>
                   </button>
@@ -212,12 +1676,12 @@
             <div class="card w-full bg-white border border-gray-300 rounded-lg">
               <!-- card header -->
               <div
-                class="flex justify-between w-full px-6 py-6 border-b border-gray-300 rounded-t-lg bg-[#f5f7fa] sticky top-[60px]"
+                class="flex flex-col sm:flex-row justify-between w-full px-6 py-6 border-b border-gray-300 rounded-t-lg bg-[#f5f7fa] sticky top-[60px]"
               >
                 <h3 class="title font-semibold text-gray-500 text-xl">
                   Accented tables
                 </h3>
-                <div class="flex gap-4 items-center">
+                <div class="flex gap-4 items-center justify-end">
                   <button class="">
                     <i class="mm-1 icon1-copy"></i> <span>Copy code</span>
                   </button>
@@ -328,27 +1792,35 @@
             </div>
           </div>
           <!-- right -->
-          <div class=" w-full xl:w-2/12">
+          <div class="w-full xl:w-2/12">
             <div class="flex flex-col gap-4 sticky top-20">
-              <h5 class="font-semibold ">On this page</h5>
+              <h5 class="font-semibold">On this page</h5>
               <ul class="text-gray-500 border-t border-gray-300 pt-2">
                 <li>
-                  <a href="#!" class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
+                  <a
+                    href="#!"
+                    class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
                     >Charts</a
                   >
                 </li>
                 <li>
-                  <a href="#!" class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
+                  <a
+                    href="#!"
+                    class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
                     >Basic Form</a
                   >
                 </li>
                 <li>
-                  <a href="#!" class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
+                  <a
+                    href="#!"
+                    class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
                     >Accented tables</a
                   >
                 </li>
                 <li>
-                  <a href="#!" class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
+                  <a
+                    href="#!"
+                    class="px-4 xl:px-2 py-1 block rounded hover:bg-gray-200"
                     >Horizontal form label sizing</a
                   >
                 </li>
@@ -356,35 +1828,132 @@
             </div>
           </div>
         </div>
-        <footer class="flex justify-between items-center px-6 h-16 border-t border-gray-300">
-            <p>
-              Thank you for creating with Phoenix <span>|</span> 2024 ©
-              <a href="#!">Themewagon</a>
-            </p>
-            <p>
-              v1.18.0
-            </p>
-          </footer>
+        <footer
+          class="flex justify-between items-center px-6 h-16 border-t border-gray-300"
+        >
+          <p>
+            Thank you for creating with Phoenix <span>|</span> 2024 ©
+            <a href="#!">Themewagon</a>
+          </p>
+          <p>v1.18.0</p>
+        </footer>
       </div>
       <div>
-        <button  class="bg-white rounded-full p-4 sm:px-6 transition-all duration-300 shadow-md border border-gray-300 flex items-center gap-2 fixed bottom-20 right-12">
-            <i class="mm-1 icon1-chevron-down hidden" ></i>
-            <i class="mm-1 icon1-headphone-1 text-blue-600 sm:hidden"></i>
-            <span class="font-semibold text-blue-600 hidden sm:block">Chat demo</span>
-            <div class="absolute -top-1 left-0 sm:static">
-                <div class="mm-1 icon1-circle-fill text-green-700 relative">
-                    <i class="mm-1 icon1-circle-fill text-green-700 text-opacity-65 -z-10 absolute top-0 left-0 ring-icon1-circle-fill"></i>
-                </div>
-                
+        <div
+          class="support-chat fixed scale-0 right-2 sm:right-12 bottom-40 bg-white w-screen max-w-96 rounded-lg border border-gray-200 transition-all duration-300 origin-bottom-right"
+        >
+          <!-- chat-header -->
+          <div
+            class="flex justify-between p-3.5 px-4 border-b border-gray-200 items-center"
+          >
+            <div class="flex gap-2 items-center">
+              <h4>Demo widget</h4>
+              <i class="mm-1 icon1-circle-fill text-green-700"></i>
             </div>
-          </button>
+            <div class="relative">
+              <i
+                onclick="toggleShowHideByID(event, 'moreDetails', 'flex')"
+                class="mm-1 icon1-more-h w-8 aspect-square p-2 rounded-full hover:bg-gray-100"
+              ></i>
+              <div
+                id="moreDetails"
+                class="header-more flex flex-col hidden absolute top-6 right-2 w-[170px] z-10 bg-white border border-gray-300 rounded-md [&>a]:text-sm [&>a]:px-3 [&>a]:py-1.5 [&>a:hover]:bg-gray-200"
+              >
+                <a href="#!">Request a callback</a>
+                <a href="#!">Search in chat</a>
+                <a href="#!">Show history</a>
+                <a href="#!">Report to Admin</a>
+                <a href="#!">Close Support</a>
+              </div>
+            </div>
+          </div>
+          <!-- chat main -->
+          <div class="p-4">
+            <div class="text-center">
+              <div class="relative w-fit mx-auto">
+                <img
+                  class="w-20 aspect-square border border-gray-300 rounded-full"
+                  src="assets/img/30.webp"
+                  alt=""
+                />
+                <div
+                  class="text-lg border-2 border-gray-50 rounded-full mm-1 icon1-circle-fill text-green-700 absolute bottom-2 right-0"
+                ></div>
+              </div>
+              <h5 class="sub-title">Eric</h5>
+              <p class="pb-6">
+                Ask us anything – we’ll get back to you here or by email within
+                24 hours.
+              </p>
+            </div>
+            <div class="flex flex-col items-end text-sm gap-4">
+              <div
+                class="flex gap-3 border border-blue-600 rounded-full items-center px-4 py-1.5"
+              >
+                <p>I need help with something</p>
+                <i class="mm-1 icon1-solid-paper-plane text-blue-600"></i>
+              </div>
+
+              <div
+                class="inline-flex gap-3 border border-blue-600 rounded-full items-center px-4 py-1.5"
+              >
+                <p>I can’t reorder a product I previously ordered</p>
+                <i class="mm-1 icon1-solid-paper-plane text-blue-600"></i>
+              </div>
+
+              <div
+                class="inline-flex gap-3 border border-blue-600 rounded-full items-center px-4 py-1.5"
+              >
+                <p>How do I place an order?</p>
+                <i class="mm-1 icon1-solid-paper-plane text-blue-600"></i>
+              </div>
+            </div>
+          </div>
+          <!-- chat footer -->
+          <div class="flex items-center gap-4 p-4 border-t border-gray-200">
+            <div
+              class="flex gap-2 items-center border border-gray-200 rounded-full p-2 px-4 w-full"
+            >
+              <input class="w-full" type="text" placeholder="Wire mesage" />
+              <label for="supportChatPhotos"
+                ><i class="mm-1 icon1-image"></i
+              ></label>
+              <input
+                type="file"
+                id="supportChatPhotos"
+                accept="image/*"
+                class="hidden"
+              />
+              <label for="supportChatFile"
+                ><i class="mm-1 icon1-link"></i
+              ></label>
+              <input type="file" id="supportChatFile" class="hidden" />
+            </div>
+            <i class="mm-1 icon1-solid-paper-plane text-blue-600"></i>
+          </div>
+        </div>
+        <button
+          onclick="btnChat()"
+          class="btn-support-chat bg-white rounded-full sm:px-4 px-2.5 py-2.5 transition-all duration-300 shadow-md border border-gray-300 flex items-center gap-2 fixed bottom-20 right-2 sm:right-12"
+        >
+          <i class="mm-1 icon1-chevron-down text-[28px] hidden"></i>
+          <i
+            class="mm-1 icon1-headphone-1 text-[28px] text-blue-600 sm:hidden"
+          ></i>
+          <span class="font-semibold text-blue-600 hidden sm:block"
+            >Chat demo</span
+          >
+          <div class="absolute -top-1 left-0 sm:static">
+            <div class="mm-1 icon1-circle-fill text-green-700 relative">
+              <i
+                class="mm-1 icon1-circle-fill text-green-700 text-opacity-65 -z-10 absolute top-0 left-0 animate-ping"
+              ></i>
+            </div>
+          </div>
+        </button>
       </div>
     </main>
-    <script>
-      function toggleDropdown() {
-        const dropdown = document.getElementById("dropdown");
-        dropdown.classList.toggle("hidden");
-      }
-    </script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
