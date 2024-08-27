@@ -66,7 +66,7 @@ function toggleShowHideByID(event, toggleID, display) {
 function toggleDropdown(element) {
   const caret = element.getElementsByClassName('icon1-caret-right')[0];
   const parentWrapper = element.nextElementSibling;
-  parentWrapper.classList.toggle("hidden");
+   parentWrapper.classList.toggle("hidden");
   caret.classList.add('transition-all', 'duration-300');
   caret.classList.toggle("rotate-90");
 
