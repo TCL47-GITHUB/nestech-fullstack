@@ -1100,7 +1100,7 @@
             <li class="nav-item">
               <div class="nav-item-wrapper">
                 <p class="label">MODULES</p>
-               
+
                 <!-- Forms -->
                 <div>
                   <div
@@ -1335,53 +1335,53 @@
                     </ul>
                   </div>
                 </div>
-               <!-- Echarts -->
-               <div>
-                <div
-                  onclick="toggleDropdown(this)"
-                  class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
-                >
-                  <i class="mm-1 icon1-caret-right text-[10px]"></i>
-                  <div class="flex items-center gap-2">
-                    <i class="mm-1 icon1-analytic text-xl"></i>
-                    <p>Echarts</p>
+                <!-- Echarts -->
+                <div>
+                  <div
+                    onclick="toggleDropdown(this)"
+                    class="cursor-pointer nav-link rounded-md hover:bg-gray-100 py-1.5 px-3 flex items-center"
+                  >
+                    <i class="mm-1 icon1-caret-right text-[10px]"></i>
+                    <div class="flex items-center gap-2">
+                      <i class="mm-1 icon1-analytic text-xl"></i>
+                      <p>Echarts</p>
+                    </div>
+                  </div>
+                  <div class="parent-wrapper hidden">
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Ceate new</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project list view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project cart view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project board view</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Todo list</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link block rounded-md" href="#!">
+                          <span>Project details</span>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="parent-wrapper hidden">
-                  <ul>
-                    <li class="nav-item">
-                      <a class="nav-link block rounded-md" href="#!">
-                        <span>Ceate new</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link block rounded-md" href="#!">
-                        <span>Project list view</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link block rounded-md" href="#!">
-                        <span>Project cart view</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link block rounded-md" href="#!">
-                        <span>Project board view</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link block rounded-md" href="#!">
-                        <span>Todo list</span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link block rounded-md" href="#!">
-                        <span>Project details</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
                 <!-- Components -->
                 <div>
                   <div
@@ -1840,14 +1840,333 @@
         </footer>
       </div>
       <!-- settings -->
-       <div class="flex items-center gap-1 rotate-[270deg] fixed -right-10 bottom-96 cursor-pointer bg-white border border-gray-300 rounded-md px-3 py-3">
-        <i class="mm-1 icon1-solid-settings text-2xl text-blue-600 animate-spin"></i>
+      <div onclick="showSettings('overlaySettings')"
+        class="flex items-center gap-1 rotate-[270deg] fixed -right-10 bottom-96 cursor-pointer bg-white border border-gray-300 rounded-md px-3 py-3"
+      >
+        <i
+          class="mm-1 icon1-solid-settings text-2xl text-blue-600 animate-spin"
+        ></i>
         <p class="text-xs font-semibold text-gray-500">CUSTOMEIZE</p>
-       </div>
+      </div>
+
+      <div id="overlaySettings" 
+        class="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40 z-50 hidden"
+      >
+        <div class="flex-1" onclick="hideSettings('overlaySettings')"></div>
+        <div class="settings-panel bg-white max-w-[28rem] min-w-96 ml-auto h-screen">
+          <!-- header -->
+          <div class="settings-panel--header p-4 border-b border-gray-200">
+            <div class="flex items-center justify-between mb-8">
+              <div>
+                <div class="flex gap-2 items-center">
+                  <i class="mm-1 icon1-solid-color-lens text-lg"></i>
+                  <h4 class="font-semibold">Theme Customers</h4>
+                </div>
+                <p class="text-xs text-gray-500">
+                  Explore different styles according to your preferences
+                </p>
+              </div>
+              <i onclick="hideSettings('overlaySettings')" class="mm-1 icon1-times text-lg font-semibold cursor-pointer"></i>
+            </div>
+            <button
+              class="font-semibold flex items-center justify-center gap-2 text-sm btn-light w-full border border-gray-200"
+            >
+              <i class="mm-1 icon1-sync"></i><span>Reset to default</span>
+            </button>
+          </div>
+          <!-- body -->
+          <div class="settings-panel--body p-4 h-[calc(100vh-143px)] overflow-y-scroll overflow-x-auto">
+            <!-- Color Scheme -->
+            <div class="border border-gray-200 rounded-lg bg-gray-100 p-4">
+              <h5 class="font-semibold mb-2">Color Scheme</h5>
+              <div class="flex gap-2">
+                <div class="w-1/3">
+                  <input
+                    type="radio"
+                    name="theme-color"
+                    id="themeSwitcherLight"
+                    class="hidden btn-check"
+                    checked
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherLight">
+                    <img
+                      src="assets/img/default-light.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Light</span
+                      >
+                    </div>
+                  </label>
+                </div>
+                <div class="w-1/3">
+                  <input
+                    type="radio"
+                    name="theme-color"
+                    id="themeSwitcherDark"
+                    class="hidden btn-check"
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherDark">
+                    <img
+                      src="assets/img/default-dark.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Dark</span
+                      >
+                    </div>
+                  </label>
+                </div>
+                <div class="w-1/3">
+                  <input
+                    type="radio"
+                    name="theme-color"
+                    id="themeSwitcherAuto"
+                    class="hidden btn-check"
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherAuto">
+                    <img
+                      src="assets/img/auto.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Auto</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!-- Navigation Type -->
+            <div class="border border-gray-200 rounded-lg bg-gray-100 p-4 mt-4">
+              <h5 class="font-semibold mb-2">Navigation Type</h5>
+              <div class="flex flex-wrap">
+                <div
+                  class="w-1/2 flex-shrink-0 flex-grow-0 basis-auto px-1 mb-2"
+                >
+                  <input
+                    type="radio"
+                    name="navigation-type"
+                    id="themeSwitcherVectical"
+                    class="hidden btn-check"
+                    checked
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherVectical">
+                    <img
+                      src="assets/img/default-light.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Vectical</span
+                      >
+                    </div>
+                  </label>
+                </div>
+                <div
+                  class="w-1/2 flex-shrink-0 flex-grow-0 basis-auto px-1 mb-2"
+                >
+                  <input
+                    type="radio"
+                    name="navigation-type"
+                    id="themeSwitcherHorizontal"
+                    class="hidden btn-check"
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherHorizontal">
+                    <img
+                      src="assets/img/top-default.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Horizontal</span
+                      >
+                    </div>
+                  </label>
+                </div>
+                <div class="w-1/2 flex-shrink-0 flex-grow-0 basis-auto px-1">
+                  <input
+                    type="radio"
+                    name="navigation-type"
+                    id="themeSwitcherCombo"
+                    class="hidden btn-check"
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherCombo">
+                    <img
+                      src="assets/img/default-light.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Combo</span
+                      >
+                    </div>
+                  </label>
+                </div>
+                <div class="w-1/2 flex-shrink-0 flex-grow-0 basis-auto px-1">
+                  <input
+                    type="radio"
+                    name="navigation-type"
+                    id="themeSwitcherDualNav"
+                    class="hidden btn-check"
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherDualNav">
+                    <img
+                      src="assets/img/top-default.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Dual nav</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!-- Vertical Navbar Appearance -->
+            <div class="border border-gray-200 rounded-lg bg-gray-100 p-4 mt-4">
+              <h5 class="font-semibold mb-2">Vertical Navbar Appearance</h5>
+              <div class="flex flex-wrap">
+                <div
+                  class="w-1/2 flex-shrink-0 flex-grow-0 basis-auto px-1 mb-2"
+                >
+                  <input
+                    type="radio"
+                    name="navbar-appearance"
+                    id="themeSwitcherDefault"
+                    class="hidden btn-check"
+                    checked
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherDefault">
+                    <img
+                      src="assets/img/default-light.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Default</span
+                      >
+                    </div>
+                  </label>
+                </div>
+                <div
+                  class="w-1/2 flex-shrink-0 flex-grow-0 basis-auto px-1 mb-2"
+                >
+                  <input
+                    type="radio"
+                    name="navbar-appearance"
+                    id="themeSwitcherDarker"
+                    class="hidden btn-check"
+                  />
+                  <label class="cursor-pointer" for="themeSwitcherDarker">
+                    <img
+                      src="assets/img/top-default.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Darker</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!-- Horizontal Navbar Shape -->
+            <div class="border border-gray-200 rounded-lg bg-gray-100 p-4 mt-4">
+              <h5 class="font-semibold mb-2">Horizontal Navbar Shape</h5>
+              <div class="flex flex-wrap">
+                <div
+                  class="w-1/2 flex-shrink-0 flex-grow-0 basis-auto px-1 mb-2"
+                >
+                  <input
+                    type="radio"
+                    name="navbar-shape"
+                    id="navbarShapeDefault"
+                    class="hidden btn-check"
+                    checked
+                  />
+                  <label class="cursor-pointer" for="navbarShapeDefault">
+                    <img
+                      src="assets/img/default-light.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Default</span
+                      >
+                    </div>
+                  </label>
+                </div>
+                <div
+                  class="w-1/2 flex-shrink-0 flex-grow-0 basis-auto px-1 mb-2"
+                >
+                  <input
+                    type="radio"
+                    name="navbar-shape"
+                    id="navbarShapeSlim"
+                    class="hidden btn-check"
+                  />
+                  <label class="cursor-pointer" for="navbarShapeSlim">
+                    <img
+                      src="assets/img/vertical-darker.png"
+                      class="rounded-lg border-gray-200 border-2 mb-1.5"
+                    />
+                    <div class="flex items-center gap-1">
+                      <div
+                        class="label-text w-4 h-4 rounded-full border border-gray-300 transistion-all duration-300"
+                      ></div>
+                      <span class="font-semibold text-gray-800 text-sm"
+                        >Slim</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button class="btn-primary w-full my-6">Purchase template</button>
+          </div>
+          
+        </div>
+      </div>
       <!-- chat -->
       <div>
         <div
-          class="support-chat fixed scale-0 right-2 sm:right-12 bottom-40 bg-white w-screen max-w-96 rounded-lg border border-gray-200 transition-all duration-300 origin-bottom-right"
+          class="support-chat fixed scale-0 right-2 sm:right-12 bottom-36 bg-white w-screen max-w-96 rounded-lg border border-gray-200 transition-all duration-300 origin-bottom-right"
         >
           <!-- chat-header -->
           <div

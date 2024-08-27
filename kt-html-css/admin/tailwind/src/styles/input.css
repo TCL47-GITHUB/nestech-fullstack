@@ -85,6 +85,17 @@ select:focus-visible {
     }
 }
 
+.btn-check:checked:not([disabled]) + label{
+        & > img{
+            @apply border-blue-500;
+        }
+
+        & > div > .label-text{
+            @apply border-blue-500 border-4;
+        }
+
+}
+
 .no-scrollbar{
     scrollbar-width: none;
 }
