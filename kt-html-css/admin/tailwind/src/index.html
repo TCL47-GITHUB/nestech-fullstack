@@ -1542,8 +1542,34 @@
         >
           <!-- left -->
           <div class="flex flex-col gap-6 w-full">
-            <!-- Basic form -->
+            <!-- Echarts -->
             <div class="card w-full bg-white border border-gray-300 rounded-lg">
+              <!-- card header -->
+              <div
+                class="flex flex-col sm:flex-row justify-between w-full px-6 py-6 border-b border-gray-300 rounded-t-lg bg-[#f5f7fa] sticky top-[60px] z-10"
+              >
+                <h3 class="title font-semibold text-gray-500 text-xl">
+                  Echarts
+                </h3>
+                <div class="flex gap-4 items-center justify-end">
+                  <button>
+                    <i class="mm-1 icon1-copy"></i> <span>Copy code</span>
+                  </button>
+                  <button class="btn-light border border-gray-300">
+                    <i class="mm-1 icon1-eye"></i> <span>View code</span>
+                  </button>
+                </div>
+              </div>
+              <!-- card body -->
+              <div>
+                <div class="flex flex-wrap justify-between">
+                  <div class="flex-grow-1 shrink-0 basis-[46rem]" id="bar-chart-1"></div>
+                  <div class="flex-grow-1 shrink-0 basis-96" id="bar-chart-2"></div>
+                </div>
+              </div>
+            </div>
+             <!-- Basic form -->
+             <div class="card w-full bg-white border border-gray-300 rounded-lg">
               <!-- card header -->
               <div
                 class="flex flex-col sm:flex-row justify-between w-full px-6 py-6 border-b border-gray-300 rounded-t-lg bg-[#f5f7fa] sticky top-[60px]"
@@ -1852,7 +1878,7 @@
       <div id="overlaySettings" 
         class="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-40 z-50 hidden"
       >
-        <div class="flex-1" onclick="hideSettings('overlaySettings')"></div>
+        <div class="flex-1 cursor-close" onclick="hideSettings('overlaySettings')"></div>
         <div class="settings-panel bg-white max-w-[28rem] min-w-96 ml-auto h-screen">
           <!-- header -->
           <div class="settings-panel--header p-4 border-b border-gray-200">
@@ -2279,7 +2305,11 @@
         </button>
       </div>
     </main>
-
+    <script
+    type="text/javascript"
+    src="https://fastly.jsdelivr.net/npm/echarts-nightly@5.6.0-dev.20240812/dist/echarts.min.js"
+  ></script>
+    <script src="js/chart.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

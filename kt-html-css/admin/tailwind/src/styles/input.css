@@ -96,6 +96,11 @@ select:focus-visible {
 
 }
 
+.cursor-close {
+    @apply cursor-none; /* Use 'none' to hide the default cursor */
+    cursor: url('../assets/img/close.png'), pointer;
+  }
+
 .no-scrollbar{
     scrollbar-width: none;
 }
