@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 .btn {
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
     padding: .3rem 1rem ;
     border-radius: 8px;
 }
@@ -12,4 +15,8 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.block--item:hover{
+    box-shadow: rgba(46, 185, 240, 0.4) 0px 5px, rgba(46, 195, 240, 0.2)0px 10px, rgba(240, 46, 170, 0.05) 0px 15px;
 }
